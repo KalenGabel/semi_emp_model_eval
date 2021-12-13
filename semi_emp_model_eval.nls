@@ -1,0 +1,8 @@
+
+\begin{thenomenclature} 
+\nomgroup{A}
+  \item [{$T_d$}]\begingroup Discharge Dew Point Temperature \nomunit{[C or F]}\nomeqref {1}\nompageref{5}
+  \item [{$T_s$}]\begingroup Suction Dew Point Temperature \nomunit{[C or F]}\nomeqref {1}\nompageref{5}
+  \item [{$T_{test}$}]\begingroup Test Test Test Test \nomunit{[C or F]}\nomeqref {1}\nompageref{5}
+
+\end{thenomenclature}
