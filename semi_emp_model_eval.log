@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (MiKTeX 21.10) (preloaded format=pdflatex 2021.10.14)  13 DEC 2021 15:06
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (MiKTeX 21.10) (preloaded format=pdflatex 2022.1.3)  10 JAN 2022 16:33
 entering extended mode
 **./semi_emp_model_eval.tex
 (semi_emp_model_eval.tex
@@ -177,7 +177,7 @@ Package xcolor Info: Model `Gray' substituted by `gray' on input line 1370.
 Package xcolor Info: Model `wave' substituted by `hsb' on input line 1371.
 )
 (C:\Users\kaleng\AppData\Roaming\MiKTeX\2.9\tex/latex/nomencl\nomencl.sty
-Package: nomencl 2020/12/29 v5.5 Nomenclature package
+Package: nomencl 2021/11/10 v5.6 Nomenclature package
 
 (C:\Program Files\MiKTeX 2.9\tex/latex/xkeyval\xkeyval.sty
 Package: xkeyval 2020/11/20 v2.8 package option processing (HA)
@@ -194,22 +194,22 @@ File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
 Package: ifthen 2020/11/24 v1.1c Standard LaTeX ifthen package (DPC)
 )
 (C:\Users\kaleng\AppData\Roaming\MiKTeX\2.9\tex/latex/koma-script\tocbasic.sty
-Package: tocbasic 2021/06/25 v3.34 KOMA-Script package (handling toc-files)
+Package: tocbasic 2021/11/13 v3.35 KOMA-Script package (handling toc-files)
 
 (C:\Users\kaleng\AppData\Roaming\MiKTeX\2.9\tex/latex/koma-script\scrbase.sty
-Package: scrbase 2021/06/25 v3.34 KOMA-Script package (KOMA-Script-independent 
+Package: scrbase 2021/11/13 v3.35 KOMA-Script package (KOMA-Script-independent 
 basics and keyval usage)
 
 (C:\Users\kaleng\AppData\Roaming\MiKTeX\2.9\tex/latex/koma-script\scrlfile.sty
-Package: scrlfile 2021/06/25 v3.34 KOMA-Script package (file load hooks)
+Package: scrlfile 2021/11/13 v3.35 KOMA-Script package (file load hooks)
 
 (C:\Users\kaleng\AppData\Roaming\MiKTeX\2.9\tex/latex/koma-script\scrlfile-hook
-.sty
-Package: scrlfile-hook 2021/06/25 v3.34 KOMA-Script package (using LaTeX hooks)
-
+-3.34.sty
+Package: scrlfile-hook-3.34 2021/11/13 v3.35 KOMA-Script package (using LaTeX h
+ooks)
 
 (C:\Users\kaleng\AppData\Roaming\MiKTeX\2.9\tex/latex/koma-script\scrlogo.sty
-Package: scrlogo 2021/06/25 v3.34 KOMA-Script package (logo)
+Package: scrlogo 2021/11/13 v3.35 KOMA-Script package (logo)
 )))
 Applying: [2021/05/01] Usage of raw or classic option list on input line 252.
 Already applied: [0000/00/00] Usage of raw or classic option list on input line
@@ -354,7 +354,7 @@ Package: multirow 2021/03/15 v2.8 Span multiple rows of a table
 \bigstrutjot=\dimen182
 )
 (C:\Users\kaleng\AppData\Roaming\MiKTeX\2.9\tex/latex/tools\longtable.sty
-Package: longtable 2021-05-07 v4.16 Multi-page Table package (DPC)
+Package: longtable 2021-09-01 v4.17 Multi-page Table package (DPC)
 \LTleft=\skip62
 \LTright=\skip63
 \LTpre=\skip64
@@ -518,7 +518,7 @@ Package: listings 2020/03/24 1.8d (Carsten Heinz)
 Package: colortbl 2020/01/04 v1.0e Color table columns (DPC)
 
 (C:\Users\kaleng\AppData\Roaming\MiKTeX\2.9\tex/latex/tools\array.sty
-Package: array 2021/04/20 v2.5e Tabular extension package (FMi)
+Package: array 2021/10/04 v2.5f Tabular extension package (FMi)
 \col@sep=\dimen192
 \ar@mcellbox=\box69
 \extrarowheight=\dimen193
@@ -531,7 +531,7 @@ Package: array 2021/04/20 v2.5e Tabular extension package (FMi)
 \minrowclearance=\skip69
 )
 (C:\Users\kaleng\AppData\Roaming\MiKTeX\2.9\tex/latex/tools\multicol.sty
-Package: multicol 2019/12/09 v1.8y multicolumn formatting (FMi)
+Package: multicol 2021/10/28 v1.9b multicolumn formatting (FMi)
 \c@tracingmulticols=\count318
 \mult@box=\box71
 \multicol@leftmargin=\dimen194
@@ -551,8 +551,8 @@ Package: multicol 2019/12/09 v1.8y multicolumn formatting (FMi)
 \maxbalancingoverflow=\dimen199
 \mult@rightbox=\box74
 \mult@grightbox=\box75
-\mult@gfirstbox=\box76
-\mult@firstbox=\box77
+\mult@firstbox=\box76
+\mult@gfirstbox=\box77
 \@tempa=\box78
 \@tempa=\box79
 \@tempa=\box80
@@ -589,15 +589,14 @@ Package: multicol 2019/12/09 v1.8y multicolumn formatting (FMi)
 \@tempa=\box111
 \@tempa=\box112
 \@tempa=\box113
-\@tempa=\box114
 \c@minrows=\count324
 \c@columnbadness=\count325
 \c@finalcolumnbadness=\count326
 \last@try=\dimen256
 \multicolovershoot=\dimen257
 \multicolundershoot=\dimen258
-\mult@nat@firstbox=\box115
-\colbreak@box=\box116
+\mult@nat@firstbox=\box114
+\colbreak@box=\box115
 \mc@col@check@num=\count327
 )
 (C:\Users\kaleng\AppData\Roaming\MiKTeX\2.9\tex/latex/mdframed\mdframed.sty
@@ -663,11 +662,11 @@ Package: needspace 2010/09/12 v1.3d reserve vertical space
 (C:\Users\kaleng\AppData\Roaming\MiKTeX\2.9\tex/latex/mdframed\md-frame-0.mdf
 File: md-frame-0.mdf 2013/07/01\ 1.9b: md-frame-0
 )
-\mdf@frametitlebox=\box117
-\mdf@footnotebox=\box118
-\mdf@splitbox@one=\box119
-\mdf@splitbox@two=\box120
-\mdf@splitbox@save=\box121
+\mdf@frametitlebox=\box116
+\mdf@footnotebox=\box117
+\mdf@splitbox@one=\box118
+\mdf@splitbox@two=\box119
+\mdf@splitbox@save=\box120
 \mdfsplitboxwidth=\skip112
 \mdfsplitboxtotalwidth=\skip113
 \mdfsplitboxheight=\skip114
@@ -723,7 +722,7 @@ ommon.tex
 ommon-lists.tex))
 (C:\Users\kaleng\AppData\Roaming\MiKTeX\2.9\tex/generic/pgf/utilities\pgfutil-l
 atex.def
-\pgfutil@abb=\box122
+\pgfutil@abb=\box121
 )
 (C:\Users\kaleng\AppData\Roaming\MiKTeX\2.9\tex/generic/pgf/utilities\pgfrcs.co
 de.tex
@@ -807,7 +806,7 @@ de.tex)
 code.tex
 \pgfmath@dimen=\dimen271
 \pgfmath@count=\count342
-\pgfmath@box=\box123
+\pgfmath@box=\box122
 \pgfmath@toks=\toks41
 \pgfmath@stack@operand=\toks42
 \pgfmath@stack@operation=\toks43
@@ -869,9 +868,9 @@ File: pgfcorepathusage.code.tex 2021/05/15 v3.1.9a (3.1.9a)
 (C:\Users\kaleng\AppData\Roaming\MiKTeX\2.9\tex/generic/pgf/basiclayer\pgfcores
 copes.code.tex
 File: pgfcorescopes.code.tex 2021/05/15 v3.1.9a (3.1.9a)
-\pgfpic=\box124
-\pgf@hbox=\box125
-\pgf@layerbox@main=\box126
+\pgfpic=\box123
+\pgf@hbox=\box124
+\pgf@layerbox@main=\box125
 \pgf@picture@serial@count=\count344
 )
 (C:\Users\kaleng\AppData\Roaming\MiKTeX\2.9\tex/generic/pgf/basiclayer\pgfcoreg
@@ -917,7 +916,7 @@ File: pgfcoreimage.code.tex 2021/05/15 v3.1.9a (3.1.9a)
 (C:\Users\kaleng\AppData\Roaming\MiKTeX\2.9\tex/generic/pgf/basiclayer\pgfcoree
 xternal.code.tex
 File: pgfcoreexternal.code.tex 2021/05/15 v3.1.9a (3.1.9a)
-\pgfexternal@startupbox=\box127
+\pgfexternal@startupbox=\box126
 ))
 (C:\Users\kaleng\AppData\Roaming\MiKTeX\2.9\tex/generic/pgf/basiclayer\pgfcorel
 ayers.code.tex
@@ -938,7 +937,7 @@ File: pgfcorerdf.code.tex 2021/05/15 v3.1.9a (3.1.9a)
 (C:\Users\kaleng\AppData\Roaming\MiKTeX\2.9\tex/generic/pgf/modules\pgfmodulesh
 apes.code.tex
 File: pgfmoduleshapes.code.tex 2021/05/15 v3.1.9a (3.1.9a)
-\pgfnodeparttextbox=\box128
+\pgfnodeparttextbox=\box127
 )
 (C:\Users\kaleng\AppData\Roaming\MiKTeX\2.9\tex/generic/pgf/modules\pgfmodulepl
 ot.code.tex
@@ -991,10 +990,10 @@ File: pgflibraryplothandlers.code.tex 2021/05/15 v3.1.9a (3.1.9a)
 \tikz@lastmovetoy=\dimen306
 \tikzleveldistance=\dimen307
 \tikzsiblingdistance=\dimen308
-\tikz@figbox=\box129
-\tikz@figbox@bg=\box130
-\tikz@tempbox=\box131
-\tikz@tempbox@bg=\box132
+\tikz@figbox=\box128
+\tikz@figbox@bg=\box129
+\tikz@tempbox=\box130
+\tikz@tempbox@bg=\box131
 \tikztreelevel=\count348
 \tikznumberofchildren=\count349
 \tikznumberofcurrentchild=\count350
@@ -1051,8 +1050,8 @@ Package: soul 2003/11/17 v2.4 letterspacing/underlining (mf)
 Package: floatrow 2008/08/02 v0.3b floatrow: float package extension
 \c@float@type=\count360
 \float@exts=\toks51
-\float@box=\box133
-\@floatcapt=\box134
+\float@box=\box132
+\@floatcapt=\box133
 Package floatrow Info: Modified float package code loaded on input line 455.
 Package floatrow Info: Modified rotfloat package code loaded on input line 473.
 
@@ -1075,7 +1074,7 @@ Package floatrow Info: Modified rotfloat package code loaded on input line 473.
 \sXhsize=\skip150
 \Zhsize=\skip151
 \sZhsize=\skip152
-\flrow@rowbox=\box135
+\flrow@rowbox=\box134
 \FR@Zunitlength=\dimen317
 \c@FBcnt=\count365
 \FPOScnt=\count366
@@ -1157,26 +1156,26 @@ File: tikzlibraryshapes.multipart.code.tex 2021/05/15 v3.1.9a (3.1.9a)
 (C:\Users\kaleng\AppData\Roaming\MiKTeX\2.9\tex/generic/pgf/libraries/shapes\pg
 flibraryshapes.multipart.code.tex
 File: pgflibraryshapes.multipart.code.tex 2021/05/15 v3.1.9a (3.1.9a)
-\pgfnodepartlowerbox=\box136
-\pgfnodeparttwobox=\box137
-\pgfnodepartthreebox=\box138
-\pgfnodepartfourbox=\box139
-\pgfnodeparttwentybox=\box140
-\pgfnodepartnineteenbox=\box141
-\pgfnodeparteighteenbox=\box142
-\pgfnodepartseventeenbox=\box143
-\pgfnodepartsixteenbox=\box144
-\pgfnodepartfifteenbox=\box145
-\pgfnodepartfourteenbox=\box146
-\pgfnodepartthirteenbox=\box147
-\pgfnodeparttwelvebox=\box148
-\pgfnodepartelevenbox=\box149
-\pgfnodeparttenbox=\box150
-\pgfnodepartninebox=\box151
-\pgfnodeparteightbox=\box152
-\pgfnodepartsevenbox=\box153
-\pgfnodepartsixbox=\box154
-\pgfnodepartfivebox=\box155
+\pgfnodepartlowerbox=\box135
+\pgfnodeparttwobox=\box136
+\pgfnodepartthreebox=\box137
+\pgfnodepartfourbox=\box138
+\pgfnodeparttwentybox=\box139
+\pgfnodepartnineteenbox=\box140
+\pgfnodeparteighteenbox=\box141
+\pgfnodepartseventeenbox=\box142
+\pgfnodepartsixteenbox=\box143
+\pgfnodepartfifteenbox=\box144
+\pgfnodepartfourteenbox=\box145
+\pgfnodepartthirteenbox=\box146
+\pgfnodeparttwelvebox=\box147
+\pgfnodepartelevenbox=\box148
+\pgfnodeparttenbox=\box149
+\pgfnodepartninebox=\box150
+\pgfnodeparteightbox=\box151
+\pgfnodepartsevenbox=\box152
+\pgfnodepartsixbox=\box153
+\pgfnodepartfivebox=\box154
 )))
 (C:\Users\kaleng\AppData\Roaming\MiKTeX\2.9\tex/generic/pgf/frontendlayer/tikz/
 libraries\tikzlibraryarrows.code.tex
@@ -1192,26 +1191,7 @@ File: pgflibraryarrows.code.tex 2021/05/15 v3.1.9a (3.1.9a)
 
 Package nomencl Info: Writing nomenclature file semi_emp_model_eval.nlo on inpu
 t line 52.
- (semi_emp_model_eval.aux
-
-LaTeX Warning: Label `Tab:data_info' multiply defined.
-
-
-LaTeX Warning: Label `Tab:data_info' multiply defined.
-
-
-LaTeX Warning: Label `fig:power_vspd' multiply defined.
-
-
-LaTeX Warning: Label `Tab:data_info' multiply defined.
-
-
-LaTeX Warning: Label `fig:power_vspd' multiply defined.
-
-
-LaTeX Warning: Label `Tab:data_info' multiply defined.
-
-)
+ (semi_emp_model_eval.aux)
 \openout1 = `semi_emp_model_eval.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 74.
@@ -1232,11 +1212,12 @@ LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 74.
 LaTeX Font Info:    ... okay on input line 74.
 LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 74.
 LaTeX Font Info:    ... okay on input line 74.
- (C:\Program Files\MiKTeX 2.9\tex/context/base/mkii\supp-pdf.mkii
+
+(C:\Program Files\MiKTeX 2.9\tex/context/base/mkii\supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count385
 \scratchdimen=\dimen319
-\scratchbox=\box156
+\scratchbox=\box155
 \nofMPsegments=\count386
 \nofMParguments=\count387
 \everyMPshowfont=\toks54
@@ -1317,12 +1298,12 @@ LaTeX Info: Redefining \nameref on input line 74.
 (C:\Users\kaleng\AppData\Roaming\MiKTeX\2.9\tex/latex/floatrow\fr-longtable.sty
 Package: fr-longtable 2007/11/28 v0.1b (beta) floatrow: additions for longtable
 
-\flrow@LT@lasthead=\box157
-\flrow@LT@prelastfoot=\box158
+\flrow@LT@lasthead=\box156
+\flrow@LT@prelastfoot=\box157
 \c@FBLTpage=\count393
 )
 LaTeX Font Info:    Trying to load font information for OT1+pcr on input line 9
-8.
+9.
  (C:\Users\kaleng\AppData\Roaming\MiKTeX\2.9\tex/latex/psnfss\ot1pcr.fd
 File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
 )
@@ -1332,60 +1313,45 @@ Overfull \hbox (2.43333pt too wide) has occurred while \output is active
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\<def>-command' on input line 105.
+(hyperref)                removing `\<def>-command' on input line 106.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\cnotenum' on input line 105.
+(hyperref)                removing `\cnotenum' on input line 106.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\<def>-command' on input line 105.
+(hyperref)                removing `\<def>-command' on input line 106.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\@corref' on input line 105.
+(hyperref)                removing `\@corref' on input line 106.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\<let>-command' on input line 105.
+(hyperref)                removing `\<let>-command' on input line 106.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\comma' on input line 105.
+(hyperref)                removing `\comma' on input line 106.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\<def>-command' on input line 105.
+(hyperref)                removing `\<def>-command' on input line 106.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\@fnmark' on input line 105.
+(hyperref)                removing `\@fnmark' on input line 106.
 
 [1
 
 
 {C:/Users/kaleng/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
-(semi_emp_model_eval.nls) [2] [3] [4]
+(semi_emp_model_eval.nls) [2] [3] [4] [5] [6]
 
 LaTeX Warning: `h' float specifier changed to `ht'.
-
-[5]
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-[6]
-
-Package natbib Warning: Citation `python' on page 7 undefined on input line 255
-.
-
-
-Package natbib Warning: Citation `ees' on page 7 undefined on input line 255.
 
 [7]
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
@@ -1394,83 +1360,100 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 [9]
-<mdot_vspeed.png, id=331, 462.528pt x 346.896pt>
+<mdot_vspeed.png, id=346, 462.528pt x 346.896pt>
 File: mdot_vspeed.png Graphic file (type png)
 <use mdot_vspeed.png>
-Package pdftex.def Info: mdot_vspeed.png  used on input line 404.
+Package pdftex.def Info: mdot_vspeed.png  used on input line 423.
 (pdftex.def)             Requested size: 330.42041pt x 247.8276pt.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-[10]
-<power_vspeed.png, id=338, 462.528pt x 346.896pt>
+ [10]
+<power_vspeed.png, id=353, 462.528pt x 346.896pt>
 File: power_vspeed.png Graphic file (type png)
 <use power_vspeed.png>
-Package pdftex.def Info: power_vspeed.png  used on input line 416.
+Package pdftex.def Info: power_vspeed.png  used on input line 435.
 (pdftex.def)             Requested size: 330.42041pt x 247.8276pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 [11 <./mdot_vspeed.png>]
-<mdot_extrp.png, id=345, 462.528pt x 346.896pt>
+<mdot_extrp.png, id=360, 462.528pt x 346.896pt>
 File: mdot_extrp.png Graphic file (type png)
 <use mdot_extrp.png>
-Package pdftex.def Info: mdot_extrp.png  used on input line 428.
+Package pdftex.def Info: mdot_extrp.png  used on input line 447.
 (pdftex.def)             Requested size: 330.42041pt x 247.8276pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 [12 <./power_vspeed.png>]
-<power_extrp.png, id=352, 462.528pt x 346.896pt>
+<power_extrp.png, id=367, 462.528pt x 346.896pt>
 File: power_extrp.png Graphic file (type png)
 <use power_extrp.png>
-Package pdftex.def Info: power_extrp.png  used on input line 464.
+Package pdftex.def Info: power_extrp.png  used on input line 483.
 (pdftex.def)             Requested size: 330.42041pt x 247.8276pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 [13 <./mdot_extrp.png>]
-<mdot_vspr.png, id=361, 462.528pt x 346.896pt>
+<mdot_vspr.png, id=376, 462.528pt x 346.896pt>
 File: mdot_vspr.png Graphic file (type png)
 <use mdot_vspr.png>
-Package pdftex.def Info: mdot_vspr.png  used on input line 503.
+Package pdftex.def Info: mdot_vspr.png  used on input line 522.
 (pdftex.def)             Requested size: 354.02342pt x 265.52806pt.
  [14 <./power_extrp.png>]
-<power_vspr.png, id=369, 462.528pt x 346.896pt>
+<power_vspr.png, id=384, 462.528pt x 346.896pt>
 File: power_vspr.png Graphic file (type png)
 <use power_vspr.png>
-Package pdftex.def Info: power_vspr.png  used on input line 537.
+Package pdftex.def Info: power_vspr.png  used on input line 556.
 (pdftex.def)             Requested size: 330.42041pt x 247.8276pt.
  [15 <./mdot_vspr.png>]
-[16 <./power_vspr.png>] [17] [18] (semi_emp_model_eval.bbl [19]) [20]
+[16 <./power_vspr.png>] [17] [18] (semi_emp_model_eval.bbl
+LaTeX Font Info:    Font shape `OT1/pcr/m/it' in size <10.95> not available
+(Font)              Font shape `OT1/pcr/m/sl' tried instead on input line 8.
 
-Package natbib Warning: There were undefined citations.
+Underfull \hbox (badness 10000) in paragraph at lines 4--9
+\OT1/cmr/bx/n/10.95 URL: []$\OT1/pcr/m/sl/10.95 https : / / www . ahrinet . org
+ / App _ Content / ahri / files / STANDARDS / AHRI /
+ []
 
+
+Underfull \hbox (badness 10000) in paragraph at lines 4--9
+\OT1/pcr/m/sl/10.95 AHRI _ Standard _ 540 _ (I-[]P _ and _ SI ) _2020 _ Standar
+d _ for _ Performance _ Rating _
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 4--9
+\OT1/pcr/m/sl/10.95 of _ Positive _ Displacement _ Refrigerant _ Compressors _ 
+and _ Compressor _ Units .
+ []
+
+[19]
+Underfull \hbox (badness 10000) in paragraph at lines 158--161
+\OT1/cmr/bx/n/10.95 URL: []$\OT1/pcr/m/sl/10.95 https : / / www . eia . gov / e
+nergyexplained / electricity /
+ []
+
+) [20]
 
 Package caption Warning: Unused \captionsetup[sub] on input line 22.
 See the caption package documentation for explanation.
 
 (semi_emp_model_eval.aux)
-
-LaTeX Warning: There were multiply-defined labels.
-
 Package rerunfilecheck Info: File `semi_emp_model_eval.out' has not changed.
 (rerunfilecheck)             Checksum: C58D466EDD16501CCD7CFF53DA8489E8;5167.
  ) 
 Here is how much of TeX's memory you used:
- 30013 strings out of 478927
- 568069 string characters out of 2859917
- 965167 words of memory out of 3000000
- 47216 multiletter control sequences out of 15000+600000
- 411022 words of font info for 53 fonts, out of 8000000 for 9000
+ 30048 strings out of 478936
+ 568612 string characters out of 2860164
+ 968115 words of memory out of 3000000
+ 47234 multiletter control sequences out of 15000+600000
+ 412154 words of font info for 57 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  110i,13n,117p,12151b,957s stack positions out of 5000i,500n,10000p,200000b,80000s
- <C:\Users\kaleng\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600
-\tcrm1095.pk>{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/base/8r.enc}<C:/Progr
+{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/base/8r.enc} <C:\Users\kaleng\Ap
+pData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1095.pk><C:/Progr
 am Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Program Files
 /MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files/MiKTeX 
 2.9/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Program Files/MiKTeX 2.9/fonts
@@ -1485,10 +1468,10 @@ fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Program Files/MiKTeX 2.9/fonts/typ
 e1/public/amsfonts/cm/cmti10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/publi
 c/amsfonts/cm/cmti7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfont
 s/cm/cmti9.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/courier/ucrr8a.pfb>
-
-Output written on semi_emp_model_eval.pdf (20 pages, 455570 bytes).
+<C:/Program Files/MiKTeX 2.9/fonts/type1/urw/courier/ucrro8a.pfb>
+Output written on semi_emp_model_eval.pdf (20 pages, 476940 bytes).
 PDF statistics:
- 499 PDF objects out of 1000 (max. 8388607)
- 98 named destinations out of 1000 (max. 500000)
+ 529 PDF objects out of 1000 (max. 8388607)
+ 103 named destinations out of 1000 (max. 500000)
  315 words of extra memory for PDF output out of 10000 (max. 10000000)
 

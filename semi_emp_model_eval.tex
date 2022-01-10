@@ -88,7 +88,8 @@
 \begin{abstract}
 
 Testing and evaluation of select semi-empirical compressor models is carried out to quantify performance in modulation and extrapolation scenarios. Three representative models from literature are benchmarked against an artificial neural network (ANN) model and the industry standard AHRI model. A methodology for quantifying model performance, compared against experimental data, in extrapolation and modulation scenarios is developed. The different formulations are compared against high-fidelity performance data taken from either a hot-gas bypass load stand or a compressor calorimeter. Scroll, screw, reciprocating, and spool compressor technologies and four different refrigerants were used in the evaluation. In total, 327 data points were used during model testing. The mean absolute percentage error (MAPE) is calculated for each scenario and used to determine model performance against one another. Given a model predicts the compressor technology, the semi-empirical models yield MAPE’s less than 5\% for mass flow rate and power in modulation scenarios while performing at or below 8\% MAPE in envelope extrapolation scenarios. They capture superheat extrapolation to below 6\% MAPE for mass flow rate and power with the exception of one model performing at 18\% MAPE in power prediction for one data set. The empirical formulations do not predict modulation behavior and showed varying performance at the extrapolation scenarios. Limitations with respect to model training data and overall performance are described. A model developed by Winandy et. al is identified as a starting point for a new semi-empirical model that can capture multiple compressor technologies while exhibiting good modulation and extrapolation capabilities.
-
+\nomenclature{MAPE}{Mean Absolute Percent Error}
+\nomenclature{ANN}{Artificial Neural Network}
 \end{abstract}
 
 \begin{keyword}
@@ -99,7 +100,7 @@ Semi-empirical compressor modeling \sep extrapolation \sep modulation \sep model
 
 \section{Introduction}
 
-In 2020 the residential sector used approximately 1.46 trillion kWh of electricity accounting for 39\% of total retail sales in the United States. Heating ventilation, air conditioning, and refrigeration (HVAC\&R) equipment consumed the largest percentage (37\%) of energy within the sector. The compressor operating in a vapor compression cycle is the largest energy consumer in HVAC\&R systems. Today compressor manufactures are challenged by regulatory changes aimed at mitigating climate change and global warming, while still meeting system efficiency requirements. Modeling compressor performance is a vital part in estimating overall system behavior.
+In 2020 the residential sector used approximately 1.46 trillion kWh of electricity accounting for 39\% of total retail sales in the United States. Heating ventilation, air conditioning, and refrigeration (HVAC\&R) equipment consumed the largest percentage (37\%) of energy within the sector, \cite{EIA}. The compressor operating in a vapor compression cycle is the largest energy consumer in HVAC\&R systems. Today compressor manufactures are challenged by regulatory changes aimed at mitigating climate change and global warming, while still meeting system efficiency requirements. Modeling compressor performance is a vital part in estimating overall system behavior.
 
 Compressor models exist on a spectrum of black box (statistical correlations) to white box (distributed models). Black box models require little information about the machine itself, while white box models need detailed input information sometimes only known by the manufacturer.
 \begin{framed}
@@ -112,26 +113,28 @@ This work aims to identify select semi-empirical compressor models from literatu
 
 \section{Model Selection}
 
-The literature survey was done to find representative models for evaluation under modulation and extrapolation scenarios. The search focused on semi-empirical formulations exhibiting good accuracy, ~5\%, a minimum number of inputs, simplified analysis techniques, and low computation costs. The \cite{Winandy_scr} model is found often in the literature surveyed. Its been modified to 3 different compressor technologies; open type reciprocating \cite{Winandy_recip}, scroll \cite{Winandy_scr}, and hermetic rolling piston \citep{Molinaroli2017}. Additionally, its been adapted to vapor and liquid injected and oil flooded scroll compressors (\cite{Winandy_inj}, \cite{James2016a}). The \cite{Popovic1995a} model is a legacy model that captures the thermodynamics and some physics present in a positive displacement reciprocating machine. This formulation seems promising and is selected as a candidate for future model development. The \cite{Shao2004a} model is a more empirical model chose for evaluation. This model exhibited good accuracy and modulation capabilities therefore it is has been chosen as a candidate for testing. 
+The literature survey was done to find representative models for evaluation under modulation and extrapolation scenarios. The search focused on semi-empirical formulations exhibiting good accuracy, ~5\%, a minimum number of inputs, simplified analysis techniques, and low computation costs. The \cite{Winandy_scr} model is found often in the literature surveyed. Its been modified to 3 different compressor technologies; open type reciprocating \cite{Winandy_recip}, scroll \cite{Winandy_scr}, and hermetic rolling piston \cite{Molinaroli2017}. Additionally, its been adapted to vapor and liquid injected and oil flooded scroll compressors (\cite{Winandy_inj}, \cite{James2016a}). The \cite{Popovic1995a} model is a legacy model that captures the thermodynamics and some physics present in a positive displacement reciprocating machine. This formulation seems promising and is selected as a candidate for future model development. The \cite{Shao2004a} model is a more empirical model chose for evaluation. This model exhibited good accuracy and modulation capabilities therefore it is has been chosen as a candidate for testing. 
 
 
 \subsection{Baseline Models}
 \subsubsection{AHRI Model}
 
-The AHRI model coming from ANSI/AHRI Standard 540 ***add citation***  is a mathematically simple third order curve fit to 10 data points. The mass flow rate and power are fitted separately as a function of evaporating and condensing temperatures. This results in two equations for performance prediction. The method is very accurate with respect to the data it is fitted to. The computational burden is minimal making it a good option for system simulators. It's used extensively in the HVAC\&R industry for system level modeling, therefore it is used as a baseline for comparison in the present study.
+The AHRI model, coming from \cite{AHRIstandard}, is a mathematically simple third order curve fit to 10 data points. The mass flow rate and power are fitted separately as a function of evaporating and condensing temperatures. This results in two equations for performance prediction. The method is very accurate with respect to the data it is fitted to. The computational burden is minimal making it a good option for system simulators. It's used extensively in the HVAC\&R industry for system level modeling, therefore it is used as a baseline for comparison in the present study.
 
 \begin{equation}
 \label{eq:AHRI_model}
 X = C_1 + C_2T_s + C_3T_d + C_4T_s^{2} + C_5T_sT_d + C_6T_d^{2} + C_7T_s^{3} + C_8T_s^{2}T_d + C_9T_sT_d^{2} + C_{10}T_d^{3}
 \end{equation}
-\nomenclature{$T_s$}{Suction Dew Point Temperature \nomunit{[C or F]}}
-\nomenclature{$T_d$}{Discharge Dew Point Temperature \nomunit{[C or F]}}
-\nomenclature{$T_{test}$}{Test Test Test Test \nomunit{[C or F]}}
+
+\nomenclature{$T_s$}{Suction dew point temp. \nomunit{[C or F]}}
+\nomenclature{$T_d$}{Discharge dew point temp. \nomunit{[C or F]}}
+\nomenclature{$C_1-C_{10}$}{AHRI coefficients \nomunit{[-]}}
+
 Where $X$ is the power input or mass flow rate, $T_s$ and $T_d$ are the suction and discharge dewpoint temperatures, respectively, and $C_1$-$C_{10}$ are coefficients determined from least squares regression.
 
 \subsubsection{Artificial Neural Network Model}
 
-The ANN modeling approach provides an additional model for testing performance prediction in extrapolation and modulation scenarios. The ANN formulation is black box in nature and comprises of nodes and layers that take numerical inputs. Each node has a weight and bias that is tuned to performance data via an optimization algorithm. The main tool used for developing these models was the open source Tensorflow package developed by the Google Brain team. The Python programming language was used to codify models. A compact architecture was utilized for simplicity and reduced model training time. Hyperparameters considered during model development include: number of layers, number of nodes, optimizer, activation function, loss function, learning rate, training epochs, and callbacks. The table below shows some main hyperparameters selected for the modeling effort. 
+The ANN modeling approach provides an additional model for testing performance prediction in extrapolation and modulation scenarios. The ANN formulation is black box in nature and comprises of nodes and layers that take numerical inputs. Each node has a weight and bias that is tuned to performance data via an optimization algorithm. The main tool used for developing these models was the open source Tensorflow package developed by the Google Brain team. The Python programming language, \cite{P}, was used to codify models. A compact architecture was utilized for simplicity and reduced model training time. Hyperparameters considered during model development include: number of layers, number of nodes, optimizer, activation function, loss function, learning rate, training epochs, and callbacks. The table below shows some main hyperparameters selected for the modeling effort. 
 
 \begin{table}[h]
 \caption{Important parameters used during ANN model development}
@@ -156,8 +159,7 @@ The ANN modeling approach provides an additional model for testing performance p
 \end{center}
 \end{table}
 
-The loss function was selected as the Mean Squared Error (MSE) for most data sets with the exception of the scroll and screw compressor data sets where the Mean Absolute Percentage Error (MAPE) and Mean Absolute Error (MAE) were used. The necessity of different loss functions stems from the ANN having difficulty training to a certain data set with a chosen hyperparameter selection. Changing the loss function resulted in the optimizer successfully minimizing the loss to an acceptable level. 
-
+The loss function was selected as the Mean Squared Error (MSE) for most data sets with the exception of the scroll and screw compressor data sets where the Mean Absolute Percentage Error (MAPE) and Mean Absolute Error (MAE) were used. The necessity of different loss functions stems from the ANN having difficulty training to a certain data set with a chosen hyperparameter selection. Changing the loss function resulted in the optimizer successfully minimizing the loss to an acceptable level.
 
 \subsection{Models from Literature}
 \subsubsection{The Shao Model}
@@ -186,7 +188,10 @@ The Shao Model from \cite{Shao2004a} is a black box model that utilizes performa
 \end{center}
 \end{table}
 
-
+\nomenclature{$a_1-a_{5}$}{Mass flow coefficients \nomunit{[-]}}
+\nomenclature{$c_1-c_{3}$}{Mass flow ratio coefficients \nomunit{[-]}}
+\nomenclature{$b_1-b_{5}$}{Power coefficients \nomunit{[-]}}
+\nomenclature{$d_1-d_{5}$}{Power ratio coefficients \nomunit{[-]}}
 
 \subsubsection{The Popovic and Shapiro Model}
 
@@ -217,12 +222,20 @@ The Popovic and Shapiro model from \cite{Popovic1995a} is a semi-empirical compr
 \end{center}
 \end{table}
 
+\nomenclature{RPD}{Piston displacement \nomunit{[$m^{3}$/min]}}
+\nomenclature{RPM}{Revolutions per minute \nomunit{[rev/min]}}
+\nomenclature{C}{Clearance factor \nomunit{[-]}}
+\nomenclature{n}{Polytropic exponent \nomunit{[-]}}
+\nomenclature{$B_1-B_{2}$}{Heat transfer loss coefficients \nomunit{[-]}}
+\nomenclature{$Q_{cyl}$}{Cylinder heat transfer \nomunit{[kJ/min]}}
+\nomenclature{$W_{cal}$}{Polytropic process work rate \nomunit{[kJ/min]}}
+
 The work achieves 8\% and 6\% relative errors for mass flow rate and power respectively. The postulated model needs eight inputs which include: refrigerant inlet state, refrigerant outlet pressure, pressure drops, clearance volume, motor speed, piston displacement, 
 a polytropic exponent estimate, and lastly an estimate of the heat transfer loss coefficient.
 
 \subsubsection{The Winandy Model}
 
-The Winandy model presented by \cite{Winandy_scr} is a semi-empirical compressor model that was derived to predict the performance of scroll compressors. The model utilizes an isothermal envelope that heats up suction gas, cools the discharge gas, absorbs electro-mechanical power losses, and exchanges heat with the ambient. The compression process is broken into two steps and modeled as isentropic up to the adapted pressure, then adiabatic at constant volume to the discharge pressure. The mass flow rate is predicted utilizing a swept volume that is considered an unknown in the formulation. Heat transfer coefficients are taken as unknowns and tuned to experimental data. The shaft power calculation follows the ASHRAE Toolkit **** cite this **** and is the sum of the compression power term, constant electro-mechanicl loss term, and electro-mechanical losses proportional to the compression power. Table \ref{Tab:win_eqs} shows the final formulations for mass flow rate and power prediction. 
+The Winandy model presented by \cite{Winandy_scr} is a semi-empirical compressor model that was derived to predict the performance of scroll compressors. The model utilizes an isothermal envelope that heats up suction gas, cools the discharge gas, absorbs electro-mechanical power losses, and exchanges heat with the ambient. The compression process is broken into two steps and modeled as isentropic up to the adapted pressure, then adiabatic at constant volume to the discharge pressure. The mass flow rate is predicted utilizing a swept volume that is considered an unknown in the formulation. Heat transfer coefficients are taken as unknowns and tuned to experimental data. The shaft power calculation follows the ASHRAE Toolkit, \cite{Toolkit}, and is the sum of the compression power term, constant electro-mechanicl loss term, and electro-mechanical losses proportional to the compression power. Table \ref{Tab:win_eqs} shows the final formulations for mass flow rate and power prediction. 
 
 \begin{table}[h]
 \caption{Winandy model mass flow rate and power formulations.}
@@ -248,11 +261,17 @@ The Winandy model presented by \cite{Winandy_scr} is a semi-empirical compressor
 \end{center}
 \end{table}
 
+\nomenclature{N}{Rotational speed \nomunit{[rev/min]}}
+\nomenclature{$V_{s}$}{Swept volume \nomunit{[$m^{3}$/rev]}}
+\nomenclature{$\alpha$}{Work loss coefficient \nomunit{[-]}}
+\nomenclature{$W_{in}$}{Internal compression power \nomunit{[W]}}
+\nomenclature{$W_{loss}$}{Constant power loss \nomunit{[W]}}
+
 The authors proposed model takes four parameters to predict mass flow rate; the swept volume, and the suction, discharge, and ambient heat transfer coefficients. The power formulation take three parameters to calculate electric power; built in volume ratio, constant power loss term, and the power coefficient. The authors achieve relative errors between -3.5\% and 2.5\% for mass flow rate and relative errors spanning -2.5\% and 3\% for power estimation. 
 
 \subsection{Model Implementation}
 
-These models represent legacy formulations identified by this work. All models were codified into the Python programming language \citep{python} except the Winandy formualation, which was coded into Engineering Equation Solver (EES) \citep{ees}.
+These models represent legacy formulations identified by this work. All models were codified into the Python programming language except the Winandy formualation, which was coded into Engineering Equation Solver (EES) \cite{EES}.
 
 \section{Data for Model Testing}
 
@@ -433,7 +452,7 @@ The results for power prediction under modulation scenarios were similar to that
 
 \begin{table}[h]
 \caption{Mass flow rate MAPE's under extrapolation scenarios.}
-\label{Tab:data_info}
+\label{Tab:extrp_mdot_results}
 \begin{center}
 \resizebox{0.8\textwidth}{!}{
 \begin{tabular}{c c c c c c}
@@ -469,7 +488,7 @@ Results show that mass flow rate extrapolation is captured by the semi-empirical
 
 \begin{table}[h]
 \caption{Power MAPE's for extrapolation scenarios.}
-\label{Tab:data_info}
+\label{Tab:extrp_pwr_results}
 \begin{center}
 \resizebox{0.8\textwidth}{!}{
 \begin{tabular}{c c c c c c}
@@ -502,13 +521,13 @@ Since the mass flow rate results are used in the power prediction for the Winand
 \centering
 \includegraphics[width=0.75\linewidth]{mdot_vspr.png}
 \caption{Mass flow rate results under variable superheat testing.}
-\label{fig:power_vspd}
+\label{fig:mdot_vspr}
 \end{figure}
 \FloatBarrier
 
 \begin{table}[h]
 \caption{Mass flow rate results for variable superheat scenarios.}
-\label{Tab:data_info}
+\label{Tab:vspr_mdot_results}
 \begin{center}
 \resizebox{0.8\textwidth}{!}{
 \begin{tabular}{c c c c c c}
@@ -536,13 +555,13 @@ The mass flow rate for variable superheat scenarios is best predicted by the Win
 \centering
 \includegraphics[width=0.7\linewidth]{power_vspr.png}
 \caption{Power results under variable superheat testing.}
-\label{fig:power_vspd}
+\label{fig:power_vspr}
 \end{figure}
 \FloatBarrier
 
 \begin{table}[h]
 \caption{Power results for variable superheat scenarios.}
-\label{Tab:data_info}
+\label{Tab:vspr_pwr_results}
 \begin{center}
 \resizebox{0.8\textwidth}{!}{
 \begin{tabular}{c c c c c c}

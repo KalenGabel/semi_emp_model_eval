@@ -1,9 +1,23 @@
 \begin{thebibliography}{xx}
 
+\harvarditem{AHRI}{2020}{AHRIstandard}
+AHRI  \harvardyearleft 2020\harvardyearright , `{ANSI/AHRI standard 540:2020
+  standard for performance rating of positive displacement refrigerant
+  compressors and compressor units}', {\em Air Conditioning and Refrigeration
+  Institute Arlington, VA, USA} .
+\newline\harvardurl{\url{https://www.ahrinet.org/App_Content/ahri/files/STANDARDS/AHRI/AHRI_Standard_540_(I-P_and_SI)_2020_Standard_for_Performance_Rating_of_Positive_Displacement_Refrigerant_Compressors_and_Compressor_Units.pdf}}
+
 \harvarditem{Aprea \harvardand\ Renno}{2008}{Aprea2008}
 Aprea, C. \harvardand\ Renno, C.  \harvardyearleft 2008\harvardyearright ,
   `{Experimental model of a variable capacity compressor}', {\em Archives of
   Thermodynamics} {\bf 33}(4),~29--37.
+
+\harvarditem[Bourdhouxhe et~al.]{Bourdhouxhe, Grodent, Lebrun, Saavedra
+  \harvardand\ Silva}{1994}{Toolkit}
+Bourdhouxhe, J.-P., Grodent, M., Lebrun, J., Saavedra, C. \harvardand\ Silva,
+  K.  \harvardyearleft 1994\harvardyearright , `A toolkit for primary hvac
+  system energy calculation—part 2: reciprocating chiller models', {\em
+  ASHRAE Transactions 1994} {\bf 100},~774--786.
 
 \harvarditem[Corber et~al.]{Corber, Navarro \harvardand\
   Urchueguı}{2007}{Corber2007}
@@ -58,6 +72,11 @@ James, N.~A., Braun, J.~E., Groll, E.~A. \harvardand\ Horton, W.~T.
   Refrigeration} {\bf 66},~50--63.
 \newline\harvardurl{http://dx.doi.org/10.1016/j.ijrefrig.2015.12.011}
 
+\harvarditem{Klien \harvardand\ Alvardo}{2000}{EES}
+Klien, S. \harvardand\ Alvardo, F.  \harvardyearleft 2000\harvardyearright ,
+  `{EES}-engineering equation solver'.
+\newline\harvardurl{\url{https://www.fchartsoftware.com/ees/}}
+
 \harvarditem{Li}{2012{\em a}}{Li2012a}
 Li, W.  \harvardyearleft 2012{\em a}\harvardyearright , `{Simplified
   steady-state modeling for hermetic compressors with focus on extrapolation}',
@@ -107,6 +126,10 @@ Popovic, P. \harvardand\ Shapiro, H.~N.  \harvardyearleft 1995\harvardyearright
   refrigeration systems}, {\em in} `ASHRAE Transactions', Vol. 101, ASHRAE,
   pp.~367--382.
 
+\harvarditem{{\em {Python.org}}}{2020}{P}
+{\em {Python.org}}  \harvardyearleft 2020\harvardyearright ,
+  \url{https://www.python.org/}.
+
 \harvarditem[Santos et~al.]{Santos, Ronzoni \harvardand\
   Hermes}{2019}{Santos2019}
 Santos, G.~Z., Ronzoni, A.~F. \harvardand\ Hermes, C.~J.  \harvardyearleft
@@ -130,6 +153,11 @@ Tello-Oquendo, F.~M., Navarro-Peris, E., Barcel{\'{o}}-Ruescas, F. \harvardand\
   vapor-injection compressors. Model description and experimental validation}',
   {\em International Journal of Refrigeration} {\bf 106},~308--326.
 \newline\harvardurl{https://doi.org/10.1016/j.ijrefrig.2019.06.031}
+
+\harvarditem{{U.S. Energy Information Administration}}{2021}{EIA}
+{U.S. Energy Information Administration}  \harvardyearleft
+  2021\harvardyearright , `{Electricity Explained}, use of electricity'.
+\newline\harvardurl{\url{https://www.eia.gov/energyexplained/electricity/use-of-electricity.php}}
 
 \harvarditem{Winandy \harvardand\ Lebrun}{2002}{Winandy_inj}
 Winandy, E.~L. \harvardand\ Lebrun, J.  \harvardyearleft 2002\harvardyearright

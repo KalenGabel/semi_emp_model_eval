@@ -1,8 +1,26 @@
 
 \begin{thenomenclature} 
 \nomgroup{A}
-  \item [{$T_d$}]\begingroup Discharge Dew Point Temperature \nomunit{[C or F]}\nomeqref {1}\nompageref{5}
-  \item [{$T_s$}]\begingroup Suction Dew Point Temperature \nomunit{[C or F]}\nomeqref {1}\nompageref{5}
-  \item [{$T_{test}$}]\begingroup Test Test Test Test \nomunit{[C or F]}\nomeqref {1}\nompageref{5}
+  \item [{$\alpha$}]\begingroup Work loss coefficient \nomunit{[-]}\nomeqref {1}\nompageref{7}
+  \item [{$a_1-a_{5}$}]\begingroup Mass flow coefficients \nomunit{[-]}\nomeqref {1}\nompageref{6}
+  \item [{$B_1-B_{2}$}]\begingroup Heat transfer loss coefficients \nomunit{[-]}\nomeqref {1}\nompageref{6}
+  \item [{$b_1-b_{5}$}]\begingroup Power coefficients \nomunit{[-]}\nomeqref {1}\nompageref{6}
+  \item [{$C_1-C_{10}$}]\begingroup AHRI coefficients \nomunit{[-]}\nomeqref {1}\nompageref{5}
+  \item [{$c_1-c_{3}$}]\begingroup Mass flow ratio coefficients \nomunit{[-]}\nomeqref {1}\nompageref{6}
+  \item [{$d_1-d_{5}$}]\begingroup Power ratio coefficients \nomunit{[-]}\nomeqref {1}\nompageref{6}
+  \item [{$Q_{cyl}$}]\begingroup Cylinder heat transfer \nomunit{[kJ/min]}\nomeqref {1}\nompageref{6}
+  \item [{$T_d$}]\begingroup Discharge dew point temp. \nomunit{[C or F]}\nomeqref {1}\nompageref{5}
+  \item [{$T_s$}]\begingroup Suction dew point temp. \nomunit{[C or F]}\nomeqref {1}\nompageref{5}
+  \item [{$V_{s}$}]\begingroup Swept volume \nomunit{[$m^{3}$/rev]}\nomeqref {1}\nompageref{7}
+  \item [{$W_{cal}$}]\begingroup Polytropic process work rate \nomunit{[kJ/min]}\nomeqref {1}\nompageref{6}
+  \item [{$W_{in}$}]\begingroup Internal compression power \nomunit{[W]}\nomeqref {1}\nompageref{7}
+  \item [{$W_{loss}$}]\begingroup Constant power loss \nomunit{[W]}\nomeqref {1}\nompageref{7}
+  \item [{ANN}]\begingroup Artificial Neural Network\nomeqref {0}\nompageref{1}
+  \item [{C}]\begingroup Clearance factor \nomunit{[-]}\nomeqref {1}\nompageref{6}
+  \item [{MAPE}]\begingroup Mean Absolute Percent Error\nomeqref {0}\nompageref{1}
+  \item [{N}]\begingroup Rotational speed \nomunit{[rev/min]}\nomeqref {1}\nompageref{7}
+  \item [{n}]\begingroup Polytropic exponent \nomunit{[-]}\nomeqref {1}\nompageref{6}
+  \item [{RPD}]\begingroup Piston displacement \nomunit{[$m^{3}$/min]}\nomeqref {1}\nompageref{6}
+  \item [{RPM}]\begingroup Revolutions per minute \nomunit{[rev/min]}\nomeqref {1}\nompageref{6}
 
 \end{thenomenclature}
