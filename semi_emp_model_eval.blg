@@ -8,45 +8,45 @@ Database file #1: library.bib
 Warning--entry type for "EIA" isn't style-file defined
 --line 28 of file library.bib
 Warning--can't use both volume and number fields in Popovic1995a
-You've used 26 entries,
+You've used 27 entries,
             2909 wiz_defined-function locations,
-            827 strings with 10553 characters,
-and the built_in function-call counts, 130730 in all, are:
-= -- 21559
-> -- 1636
+            832 strings with 10822 characters,
+and the built_in function-call counts, 135325 in all, are:
+= -- 22309
+> -- 1706
 < -- 1
-+ -- 10366
-- -- 497
-* -- 11541
-:= -- 25734
-add.period$ -- 26
-call.type$ -- 26
-change.case$ -- 358
-chr.to.int$ -- 24
-cite$ -- 27
-duplicate$ -- 427
-empty$ -- 884
-format.name$ -- 582
-if$ -- 23554
++ -- 10731
+- -- 518
+* -- 11942
+:= -- 26656
+add.period$ -- 27
+call.type$ -- 27
+change.case$ -- 372
+chr.to.int$ -- 25
+cite$ -- 28
+duplicate$ -- 442
+empty$ -- 910
+format.name$ -- 606
+if$ -- 24378
 int.to.chr$ -- 7
 int.to.str$ -- 0
-missing$ -- 23
-newline$ -- 96
-num.names$ -- 265
-pop$ -- 88
+missing$ -- 24
+newline$ -- 99
+num.names$ -- 276
+pop$ -- 92
 preamble$ -- 1
-purify$ -- 385
+purify$ -- 400
 quote$ -- 0
-skip$ -- 374
+skip$ -- 388
 stack$ -- 0
-substring$ -- 30759
-swap$ -- 104
-text.length$ -- 355
+substring$ -- 31815
+swap$ -- 106
+text.length$ -- 369
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 104
+type$ -- 108
 warning$ -- 1
-while$ -- 568
+while$ -- 589
 width$ -- 0
-write$ -- 358
+write$ -- 372
 (There were 2 warnings)
