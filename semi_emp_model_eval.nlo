@@ -1,21 +1,21 @@
 \nomenclatureentry{aMAPE@[{MAPE}]\begingroup Mean Absolute Percent Error\nomeqref {0}|nompageref}{1}
 \nomenclatureentry{aANN@[{ANN}]\begingroup Artificial Neural Network\nomeqref {0}|nompageref}{1}
-\nomenclatureentry{a$T_s$@[{$T_s$}]\begingroup Suction dew point temp. \nomunit{[C or F]}\nomeqref {1}|nompageref}{6}
-\nomenclatureentry{a$T_d$@[{$T_d$}]\begingroup Discharge dew point temp. \nomunit{[C or F]}\nomeqref {1}|nompageref}{6}
-\nomenclatureentry{a$C_1-C_{10}$@[{$C_1-C_{10}$}]\begingroup AHRI coefficients \nomunit{[-]}\nomeqref {1}|nompageref}{6}
-\nomenclatureentry{a$a_1-a_{5}$@[{$a_1-a_{5}$}]\begingroup Mass flow coefficients \nomunit{[-]}\nomeqref {1}|nompageref}{7}
-\nomenclatureentry{a$c_1-c_{3}$@[{$c_1-c_{3}$}]\begingroup Mass flow ratio coefficients \nomunit{[-]}\nomeqref {1}|nompageref}{7}
-\nomenclatureentry{a$b_1-b_{5}$@[{$b_1-b_{5}$}]\begingroup Power coefficients \nomunit{[-]}\nomeqref {1}|nompageref}{7}
-\nomenclatureentry{a$d_1-d_{5}$@[{$d_1-d_{5}$}]\begingroup Power ratio coefficients \nomunit{[-]}\nomeqref {1}|nompageref}{7}
-\nomenclatureentry{aRPD@[{RPD}]\begingroup Piston displacement \nomunit{[$m^{3}$/min]}\nomeqref {1}|nompageref}{8}
-\nomenclatureentry{aRPM@[{RPM}]\begingroup Revolutions per minute \nomunit{[rev/min]}\nomeqref {1}|nompageref}{8}
-\nomenclatureentry{aC@[{C}]\begingroup Clearance factor \nomunit{[-]}\nomeqref {1}|nompageref}{8}
-\nomenclatureentry{an@[{n}]\begingroup Polytropic exponent \nomunit{[-]}\nomeqref {1}|nompageref}{8}
-\nomenclatureentry{a$B_1-B_{2}$@[{$B_1-B_{2}$}]\begingroup Heat transfer loss coefficients \nomunit{[-]}\nomeqref {1}|nompageref}{8}
-\nomenclatureentry{a$Q_{cyl}$@[{$Q_{cyl}$}]\begingroup Cylinder heat transfer \nomunit{[kJ/min]}\nomeqref {1}|nompageref}{8}
-\nomenclatureentry{a$W_{cal}$@[{$W_{cal}$}]\begingroup Polytropic process work rate \nomunit{[kJ/min]}\nomeqref {1}|nompageref}{8}
-\nomenclatureentry{aN@[{N}]\begingroup Rotational speed \nomunit{[rev/min]}\nomeqref {1}|nompageref}{8}
-\nomenclatureentry{a$V_{s}$@[{$V_{s}$}]\begingroup Swept volume \nomunit{[$m^{3}$/rev]}\nomeqref {1}|nompageref}{8}
-\nomenclatureentry{a$\alpha$@[{$\alpha$}]\begingroup Work loss coefficient \nomunit{[-]}\nomeqref {1}|nompageref}{8}
-\nomenclatureentry{a$W_{in}$@[{$W_{in}$}]\begingroup Internal compression power \nomunit{[W]}\nomeqref {1}|nompageref}{8}
-\nomenclatureentry{a$W_{loss}$@[{$W_{loss}$}]\begingroup Constant power loss \nomunit{[W]}\nomeqref {1}|nompageref}{8}
+\nomenclatureentry{a$T_s$@[{$T_s$}]\begingroup Suction dew point temp. \nomunit{[C or F]}\nomeqref {1}|nompageref}{7}
+\nomenclatureentry{a$T_d$@[{$T_d$}]\begingroup Discharge dew point temp. \nomunit{[C or F]}\nomeqref {1}|nompageref}{7}
+\nomenclatureentry{a$C_1-C_{10}$@[{$C_1-C_{10}$}]\begingroup AHRI coefficients \nomunit{[-]}\nomeqref {1}|nompageref}{7}
+\nomenclatureentry{a$a_1-a_{5}$@[{$a_1-a_{5}$}]\begingroup Mass flow coefficients \nomunit{[-]}\nomeqref {1}|nompageref}{9}
+\nomenclatureentry{a$c_1-c_{3}$@[{$c_1-c_{3}$}]\begingroup Mass flow ratio coefficients \nomunit{[-]}\nomeqref {1}|nompageref}{9}
+\nomenclatureentry{a$b_1-b_{5}$@[{$b_1-b_{5}$}]\begingroup Power coefficients \nomunit{[-]}\nomeqref {1}|nompageref}{9}
+\nomenclatureentry{a$d_1-d_{5}$@[{$d_1-d_{5}$}]\begingroup Power ratio coefficients \nomunit{[-]}\nomeqref {1}|nompageref}{9}
+\nomenclatureentry{aRPD@[{RPD}]\begingroup Piston displacement \nomunit{[$m^{3}$/min]}\nomeqref {1}|nompageref}{9}
+\nomenclatureentry{aRPM@[{RPM}]\begingroup Revolutions per minute \nomunit{[rev/min]}\nomeqref {1}|nompageref}{9}
+\nomenclatureentry{aC@[{C}]\begingroup Clearance factor \nomunit{[-]}\nomeqref {1}|nompageref}{9}
+\nomenclatureentry{an@[{n}]\begingroup Polytropic exponent \nomunit{[-]}\nomeqref {1}|nompageref}{9}
+\nomenclatureentry{a$B_1-B_{2}$@[{$B_1-B_{2}$}]\begingroup Heat transfer loss coefficients \nomunit{[-]}\nomeqref {1}|nompageref}{9}
+\nomenclatureentry{a$Q_{cyl}$@[{$Q_{cyl}$}]\begingroup Cylinder heat transfer \nomunit{[kJ/min]}\nomeqref {1}|nompageref}{9}
+\nomenclatureentry{a$W_{cal}$@[{$W_{cal}$}]\begingroup Polytropic process work rate \nomunit{[kJ/min]}\nomeqref {1}|nompageref}{9}
+\nomenclatureentry{aN@[{N}]\begingroup Rotational speed \nomunit{[rev/min]}\nomeqref {1}|nompageref}{10}
+\nomenclatureentry{a$V_{s}$@[{$V_{s}$}]\begingroup Swept volume \nomunit{[$m^{3}$/rev]}\nomeqref {1}|nompageref}{10}
+\nomenclatureentry{a$\alpha$@[{$\alpha$}]\begingroup Work loss coefficient \nomunit{[-]}\nomeqref {1}|nompageref}{10}
+\nomenclatureentry{a$W_{in}$@[{$W_{in}$}]\begingroup Internal compression power \nomunit{[W]}\nomeqref {1}|nompageref}{10}
+\nomenclatureentry{a$W_{loss}$@[{$W_{loss}$}]\begingroup Constant power loss \nomunit{[W]}\nomeqref {1}|nompageref}{10}
