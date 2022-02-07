@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.999992 (MiKTeX 21.1) (preloaded format=xelatex 2021.3.5)  7 FEB 2022 10:10
+This is XeTeX, Version 3.14159265-2.6-0.999992 (MiKTeX 21.1) (preloaded format=xelatex 2021.3.5)  7 FEB 2022 10:52
 entering extended mode
 **./semi_emp_model_eval.tex
 (semi_emp_model_eval.tex
@@ -1315,13 +1315,13 @@ Package: fr-longtable 2007/11/28 v0.1b (beta) floatrow: additions for longtable
 \flrow@LT@prelastfoot=\box154
 \c@FBLTpage=\count387
 )
-LaTeX Font Info:    Trying to load font information for TU+pcr on input line 99
-.
-LaTeX Font Info:    No file TUpcr.fd. on input line 99.
+LaTeX Font Info:    Trying to load font information for TU+pcr on input line 10
+0.
+LaTeX Font Info:    No file TUpcr.fd. on input line 100.
 
 
 LaTeX Font Warning: Font shape `TU/pcr/m/n' undefined
-(Font)              using `TU/lmr/m/n' instead on input line 99.
+(Font)              using `TU/lmr/m/n' instead on input line 100.
 
 
 Overfull \hbox (2.43091pt too wide) has occurred while \output is active
@@ -1336,35 +1336,35 @@ File: se-ascii-print.def 2019/11/29 v1.12 stringenc: Printable ASCII characters
 )
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\<def>-command' on input line 101.
+(hyperref)                removing `\<def>-command' on input line 102.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\cnotenum' on input line 101.
+(hyperref)                removing `\cnotenum' on input line 102.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\<def>-command' on input line 101.
+(hyperref)                removing `\<def>-command' on input line 102.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\@corref' on input line 101.
+(hyperref)                removing `\@corref' on input line 102.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\<let>-command' on input line 101.
+(hyperref)                removing `\<let>-command' on input line 102.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\comma' on input line 101.
+(hyperref)                removing `\comma' on input line 102.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\<def>-command' on input line 101.
+(hyperref)                removing `\<def>-command' on input line 102.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\@fnmark' on input line 101.
+(hyperref)                removing `\@fnmark' on input line 102.
 
 [1
 
@@ -1373,11 +1373,11 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 \tf@tdo=\write7
 \openout7 = `semi_emp_model_eval.tdo'.
 
- (semi_emp_model_eval.nls) [2
+ [2
 
-]
+] (semi_emp_model_eval.nls)
 Package hyperref Info: bookmark level for unknown todo defaults to 0 on input l
-ine 113.
+ine 114.
 
 
 LaTeX Warning: Marginpar on page 3 moved.
@@ -1389,20 +1389,30 @@ LaTeX Warning: Marginpar on page 3 moved.
 
 LaTeX Warning: Marginpar on page 8 moved.
 
-[8]
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[9] [10]
+[8] [9]
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[10]
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
 
 Package natbib Warning: Citation `Schmidt2019' on page 11 undefined on input li
-ne 336.
+ne 337.
 
 
 Package natbib Warning: Citation `Singleton2019' on page 11 undefined on input 
-line 336.
+line 337.
 
-[11] [12]
+[11]
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[12]
 
 LaTeX Warning: Marginpar on page 13 moved.
 
@@ -1410,42 +1420,56 @@ LaTeX Warning: Marginpar on page 13 moved.
 LaTeX Warning: Marginpar on page 13 moved.
 
 
-Package caption Warning: \label without proper reference on input line 397.
+Package caption Warning: \label without proper reference on input line 405.
 See the caption package documentation for explanation.
 
 
 LaTeX Warning: Reference `fig:methodology' on page 13 undefined on input line 3
-94.
+96.
 
 
 LaTeX Warning: Marginpar on page 13 moved.
 
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
 [13]
+
+LaTeX Warning: Marginpar on page 14 moved.
+
 File: mdot_vspeed.png Graphic file (type bmp)
 <mdot_vspeed.png>
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[14]
 File: power_vspeed.png Graphic file (type bmp)
 <power_vspeed.png>
- [14]
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[15]
 File: mdot_extrp.png Graphic file (type bmp)
 <mdot_extrp.png>
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[15]
+[16]
 File: power_extrp.png Graphic file (type bmp)
 <power_extrp.png>
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[16]
+[17]
 File: mdot_vspr.png Graphic file (type bmp)
 <mdot_vspr.png>
- [17]
+ [18]
 File: power_vspr.png Graphic file (type bmp)
 <power_vspr.png>
- [18] [19] [20] [21] (semi_emp_model_eval.bbl
+ [19] [20] [21] [22] (semi_emp_model_eval.bbl
 
 LaTeX Font Warning: Font shape `TU/pcr/m/it' undefined
 (Font)              using `TU/pcr/m/n' instead on input line 8.
@@ -1464,7 +1488,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 4--9
 [][][][][][][] []
  []
 
-[22] [23]) [24]
+[23] [24]) [25]
 
 Package natbib Warning: There were undefined citations.
 
@@ -1482,22 +1506,16 @@ LaTeX Warning: There were undefined references.
 
 LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
-
-Package rerunfilecheck Warning: File `semi_emp_model_eval.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `semi_emp_model_eval.out':
-(rerunfilecheck)             Before: A4DABA07811A135777F276E502277A4C;2785
-(rerunfilecheck)             After:  DCC344F80CDD53515C8D589D931F8174;2491.
+Package rerunfilecheck Info: File `semi_emp_model_eval.out' has not changed.
+(rerunfilecheck)             Checksum: C162E7F47A64F8E015E6E9D759876CD7;2020.
  ) 
 Here is how much of TeX's memory you used:
- 30198 strings out of 412016
- 556312 string characters out of 2845143
- 1048337 words of memory out of 3000000
- 49386 multiletter control sequences out of 15000+200000
+ 30222 strings out of 412016
+ 556913 string characters out of 2845143
+ 1041729 words of memory out of 3000000
+ 49410 multiletter control sequences out of 15000+200000
  408952 words of font info for 55 fonts, out of 3000000 for 9000
  1348 hyphenation exceptions out of 8191
  113i,13n,117p,12889b,957s stack positions out of 5000i,500n,10000p,200000b,50000s
 
-Output written on semi_emp_model_eval.pdf (24 pages).
+Output written on semi_emp_model_eval.pdf (25 pages).
