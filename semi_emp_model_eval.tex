@@ -128,7 +128,17 @@ It is infeasible to formally evaluate all of the variants of compressor models p
 The first model is used to baseline the results as the industry-standard approach for system modeling and presentation, \citep{AHRIstandard}. This model has documented limitations in both extrapolation and modulation modalities but will serve as a basis of comparison. The second model is an Artifical Neural Network (ANN) which has recently shown promise as a black-box alternative\com{add citation here, perhaps to Ziviani's work using ANN}. \cite{Shao2004a} is another black-box approach selected due to its inclusion of modulation and high-accuracy. \cite{Popovic1995a} is a gray-box model selected due to its inclusion of a thermodynamic reference process and good accuracy.  Finally, the \cite{Winandy_scr} model is selected because of is high accuracy and high-level of physical phenomenon included.  Both \cite{Popovic1995a} and \cite{Winandy_scr} have not been evaluated in the extrapolation and modulation modalities but the increased physics fidelity made them promising for this study.
 
 \section{Selected Model Descriptions}
-This section will provide detailed technical description of each of the five compressor models selected for evaluation. This is split into a baseline model, the AHRI 10-coefficient map \citep{AHRIstandard}, and four models or approaches from literature, the Artificial Neural Network (ANN) \com{add citation} and \cite{Shao2004a, Popovic1995a, Winandy_scr}. While a compressor model has a large quanity of desired outputs they each need to predict compressor mass flow and power, most fundamentally.  Therefore, the descriptions presented will focus on how each model are developed to predict those parameters.
+This section will provide detailed technical description of each of the five compressor models selected for evaluation. This is split into a baseline model, the AHRI 10-coefficient map \citep{AHRIstandard}, and four models or approaches from literature, the Artificial Neural Network (ANN) \com{add citation} and \cite{Shao2004a, Popovic1995a, Winandy_scr}. While a compressor model has a large quanity of desired outputs they each need to predict compressor mass flow and power, most fundamentally.  Therefore, the descriptions presented will focus on how each model are developed to predict those parameters. All models were codified into the Python programming language except the Winandy model, which was developed in Engineering Equation Solver (EES) \cite{EES}.\lcom{add consistent information about the models}{For each of the models in the subsections below I suggest adding some consistent information for each of them. Including:
+
+\begin{itemize}
+	\item Number of tuned coefficients
+	\item number of inputs and their names (i.e. parameters in the equations)
+	\item number and what other information is required about the compressors (e.g. the volume ratio of a scroll)
+	\item maybe something related to the type of training required. (e.g. what type of regression/optimization is used)
+	
+	
+\end{itemize}	
+}
 
 
 \subsection{Baseline Model - AHRI Model}
@@ -252,7 +262,7 @@ a polytropic exponent estimate, and lastly an estimate of the heat transfer loss
 
 \subsubsection{The Winandy Model}
 
-The Winandy model, presented by \cite{Winandy_scr}, is a semi-empirical compressor model that was derived to predict the performance of scroll compressors. The model utilizes an isothermal envelope that heats up suction gas, cools the discharge gas, absorbs electro-mechanical power losses, and exchanges heat with the ambient. The compression process is broken into two steps and modeled as isentropic up to the adapted pressure, then adiabatic at constant volume to the discharge pressure. The mass flow rate is predicted utilizing a swept volume that is considered an unknown in the formulation. Heat transfer coefficients are taken as unknowns and tuned to experimental data. The shaft power calculation follows the ASHRAE Toolkit, \cite{Toolkit}, and is the sum of the compression power term, constant electro-mechanicl loss term, and electro-mechanical losses proportional to the compression power. Table \ref{Tab:win_eqs} shows the final formulations for mass flow rate and power prediction. 
+The Winandy model, presented by \cite{Winandy_scr}, is a semi-empirical compressor model that was derived to predict the performance of scroll compressors. The model utilizes an isothermal envelope that adds heat to the suction gas, removes heat from the discharge gas, absorbs electro-mechanical power losses, and exchanges heat with the ambient. The compression process is broken into two steps, 1) isentropic up to the adapted pressure, then 2) adiabatic at constant volume to the discharge pressure.  The adapted pressure represents the pressure during isentropic compression up to the internal volume ratio of the scroll wraps. The mass flow rate is predicted utilizing a swept volume that is considered an unknown in the formulation. Heat transfer coefficients are taken as unknowns and tuned to experimental data. The shaft power calculation follows the ASHRAE Toolkit, \cite{Toolkit}, and is the sum of the compression power term, constant electro-mechanicl loss term, and electro-mechanical losses proportional to the compression power. Table \ref{Tab:win_eqs} shows the final formulations for mass flow rate and power prediction.\com{this table seems quite insufficient to describe the model}
 
 \begin{table}[h]
 \caption{Winandy model mass flow rate and power formulations.}
@@ -286,23 +296,17 @@ The Winandy model, presented by \cite{Winandy_scr}, is a semi-empirical compress
 
 The authors proposed model takes four parameters to predict mass flow rate; the swept volume, and the suction, discharge, and ambient heat transfer coefficients. The power formulation take three parameters to calculate electric power; built in volume ratio, constant power loss term, and the power coefficient. The authors achieve relative errors between -3.5\% and 2.5\% for mass flow rate and relative errors spanning -2.5\% and 3\% for power estimation. 
 
-\subsection{Model Implementation}
+\section{High-Fidelity Data Collection and Model Testing Methodology}
 
-These models represent legacy formulations identified by this work. All models were codified into the Python programming language except the Winandy formualation, which was coded into Engineering Equation Solver (EES) \cite{EES}.
+\lcom{Add some details about each of the data sets}{In general, we need to try and include as much information as possible about these data sets.  What are the ranges of all the parameters studied, and which compressor technologies included variable superheat, speed, etc.  This paper needs to be reproducable so we need to provide enough information that someone could re-do this work, given our data.
 
-\section{Data for Model Testing}
+Additionally, there needs to be some consistency in terminology decided upon.  In Figure 1 you refer to three sub-sets of data, extrapolation, variable speed, and variable superheat, in addition to the training data.  In Figure 2, you then include the testing data set, what is this? It is confusing and should be clarified.  I suggest using a mimumum number of names, so don't introduce testign data set unless you have too. I have updated Figure 2 to reflect what I think is happening, but I'm honestly not certain so please do update.}
 
-Data needed to train parameters and coefficients in the semi-empirical and empirical formulations is desired to be of high fidelity. The Popovic and Shapiro model was derived using data that is not often provided by manufacturers, discharge temperature. To this end, measured compressor data from either a hot-gas-bypass compressor load stand or a compressor calorimeter was sought. High fidelity data, collected to a stated standard was found and used in the present study. 
+High-fidelity data, collected compliant ASHRAE standard 23.1, \com{cite the standard} was used to train each of the five models presented and explore their behavior against three additional data subsets focused on extrapolation, modulation (variable speed), and variable superheat behavior. Performance data for four different compressor technologies; scroll, screw, reciprocating, and spool compressors are used with four working fluids, R134a, R401A, R1234ze(E), and R32 with a total of 327 data points collected. The compressor types, refrigerant, and number of data points are summarized in Table \ref{Tab:data_info}. The first three compressor types represent the most common technologies used in commercial and residential heating and cooling equipment today. The fourth technology, spool compressors, represent a novel compression technology that is still in the design optimization phase of development. 
 
-Performance data for four different compressor technologies; scroll, screw, reciprocating, and spool compressors are used. The first three compressor types represent the most common technologies used in commercial and residential heating and cooling equipment today. The fourth technology, spool compressors, represent a novel compression technology that is still in the design optimization phase of development. Data sets from the above mentioned compressors provide a span of technologies that models will need to capture. Additionally, operational data for four different refrigerants is used to ensure a model is not strictly limited to a certain refrigerant. The refrigerants are R134a, R401A, R1234ze(E), and R32. A total of 327 data points have been collected and used in the present work.
+Table \ref{Tab:data_info} highlights the five total data sets were collected and used for model testing in this work. Two data sets from a 40 ton spool compressor were utilized. One set was collected with R-134a and other used R-1234ze(E) as the working fluid. The 2 ton scroll compressor data set used in this study had R-410A as the working fluid. The 2.5 ton reciprocating compressor data set utilized R-32 as its working fluid. And finally, the 75 ton screw compressor data set used R-134a as the working fluid during testing. Each data set included performance data of the compressor at a variety of saturated suction and discharge temperatures with a fixed superheat with measurements of compressor power and mass flow provided. Some of the data sets also included tests which varied the superheat and/or compressor speed/frequency as well. Sufficient geometric parameters are known about each of the compressors to satisfy the requirements of the five models selected for evaluation.
 
-\subsection{High Fidelity Data Collection}
-
-Data sets came from measured data that was collected at Oklahoma State University's (OSU) 10-80 ton hot-gas-bypass compressor load stand and from a 3 ton compressor calorimeter at the Heat Exchanger Advanced Testing Facility at Oak Ridge National Laboratory. The data collected at OSU is labeled 'In House Data'. The data collected at Oak Ridge was motivated by an initiative at AHRI called the Low-GWP Alternative Refrigerants Evaluation Program (AREP). Details of the data can be found in Table \ref{Tab:data_info}. Tests were conducted according to ASHRAE Standard 23.1, except AREP Report \#59, which didn't state a collection standard. Scroll and reciprocating performance data was collected at the Oak Ridge facility while the spool and screw compressor performance originated from OSU's facility. 
-
-\subsection{Data Sets}
-
-Five total data sets were collected and used for model testing in this work. Two data sets from a 40 ton spool compressor were utilized. One set was collected with R-134a and other used R-1234ze(E) as the working fluid. The 2 ton scroll compressor data set used in this study had R-410A as the working fluid. The 2.5 ton reciprocating compressor data set utilized R-32 as its working fluid. And finally, the 75 ton screw compressor data set used R-134a as the working fluid during testing.
+\lcom{add more information to Table 5}{I think it would be helpful to add additional information to Table 5, specifically the ranges of SST/SDT captured as well as ranges of superheat and frequency/speed. Additionally, if there is a source for the data, lets put that in there too (e.g. the scroll data)}
 
 \begin{table}[h]
 \caption{Information on the data sets collected.}
@@ -312,13 +316,13 @@ Five total data sets were collected and used for model testing in this work. Two
 \begin{tabular}{c c c c c c c}
 \hline
 \hline
-\textbf{Compressor Type}   & \textbf{Capacity}   & \textbf{Refrigerant}  & \textbf{Data Point} & \textbf{Collection Standard}   & \textbf{Reference} & \textbf{Splits} \\
+\textbf{Compressor Type}   & \textbf{Capacity}   & \textbf{Refrigerant}  & \textbf{Data Points} & \textbf{Collection Standard}   & \textbf{Reference} & \textbf{Splits} \\
 \hline
 \hline
 Spool  & 40 tons   & R-134a  & 58 & ASHRAE 23.1 & In House Data & 4\\
 Spool  & 40 tons   & R-1234ze(E) & 44 & ASHRAE 23.1 & In House Data & 4\\
-Scroll & 2.5 tons   & R-401A  & 196 & ASHRAE 23.1 & AREP \#11 & 4\\
-Screw  & 75 tons   & R-134a  & 13 & ASHRAE 23.1 & In House Data & 2\\
+Scroll & 2.5 tons   & R-410A  & 196 & ASHRAE 23.1 & AREP \#11 & 4\\
+Twin screw  & 75 tons   & R-134a  & 13 & ASHRAE 23.1 & In House Data & 2\\
 Reciprocating & 2 tons   & R-32  & 16 & Not Mentioned & AREP \#59 & 2\\
 \hline
 \hline
@@ -327,8 +331,13 @@ Reciprocating & 2 tons   & R-32  & 16 & Not Mentioned & AREP \#59 & 2\\
 \end{center}
 \end{table}
 
+\subsection{Data Collection Sources and Standards}
 
-Each data set was collected in bulk and had to be split into subsets for model capability testing. Data was split into subsets in order to form a training data set to train model parameters with. Other subsets of data are used to test model capabilities at extrapolation and modulation scenarios. A constant speed and constant superheat data subset was selected from a full data set as the baseline. Model training data and extrapolation testing data points were selected as a subset of the baseline data set. Data sets that contained variable speed or variable superheat data points were split into variable speed sets and variable superheat sets to test model performance.
+Data sets came from measured data that was collected at Oklahoma State University's (OSU) 10-80 ton hot-gas-bypass compressor load stand \citep{Schmidt2019, Singleton2019} \com{cite Drew and Jake's papers here} and from a 3 ton compressor calorimeter at the Heat Exchanger Advanced Testing Facility at Oak Ridge National Laboratory. The data collected at OSU is labeled 'In House Data'. The data collected at Oak Ridge was motivated by an initiative at AHRI called the Low-GWP Alternative Refrigerants Evaluation Program (AREP). Details of the data can be found in Table \ref{Tab:data_info}. Tests were conducted according to ASHRAE Standard 23.1, \com{cite standard} except AREP Report \#59, which didn't state a collection standard. Scroll and reciprocating performance data was collected at the Oak Ridge facility while the spool and screw compressor performance originated from OSU's facility. This is additionally summarized in Table \ref{Tab:data_info}.
+
+\subsection{Data Subsets (Splits)}
+
+Shown graphically in Figure \ref{fig:data-flowchart}, each data set was collected in bulk and had to be split into subsets (splits) for model capability testing. The full data set includes all variations, including testing at various saturated suction temperature, saturated discharge temperature and variable superheat and/or speed/frequency. Baseline data was split from the full data set to include fixed superheat and frequency data sets as some of the data sets did not include variation in one or both of these dimensions. From this, a subset was split to form a training data set to train model parameters with. Additionally, a subset of the baseline data was split to be used for testing extrapolation scenarios. From the full data set, a constant speed and constant superheat data subset was selected from the compressor data sets which included these variations to test modulation and variable superheat performance of the models. Each data set is somewhat unique in its operating envelope and parameters varied, therefore each split is unique.  However, the next section will describe the underlying principles of the decision making processes to make the splits. %\lcom{number of data points per split}{The graphic does a great job of outlining what the splits are but this section feels incomplete because you don't have a sense of how big each of these splits/subsets are and what they include in a bit more depth is warranted.  For example, the training data sets are selected to be inclusive many operating conditions, so that should be stated.  The extrapolation includes operating points that extend beyond the training data sets bounds, that is critical.  The variable speed/superheat data includes what sort of range of these variables?}
 
 \begin{figure}[h] % The [h] places the figure 'here'. Available options are [!htb] t=top, b=bottom
 \caption{Flowchart showing an overview of semi-empirical model testing and data splits}
@@ -365,12 +374,30 @@ Each data set was collected in bulk and had to be split into subsets for model c
    
 \end{tikzpicture}
 \end{center}
+\label{fig:data-flowchart}
 \end{figure}
 
+\subsubsection{Baseline and Training Data Sets}
+A baseline data set includes data from all compressors and refrigerants at various saturated suction/discharge temperatures with a fixed superheat and compressor speed/frequency.  Only the saturated suction/discharge temperatures were varied consistently across all five datasets. 
 
-\section{Model Testing Methodology}
+From the baseline data is split a training data set used to train model parameters. Ten data points were selected  as the training data set to train the models. Motivation for this number of training points stems from the AHRI model requirements for ten data points to tune its ten regression coefficients. The training data set is selected at points interior to the most extreme envelope conditions (\emph{i.e.} most extreme saturated suction and discharge temperatures) present within a data set. The baseline data was selected with saturated temperatures that were XX - YY $^\circ$C \com{add here the ranges applicable to this study} inside the maximum envelope conditions, depending on the data set and compressor.
+
+\subsubsection{Extrapolation, and Variable Speed/Superheat Data Sets}
+The extrapolation data set is a subset of the baseline data and includes saturated suction and discharge temperatures that extend beyond the envelope selected by the training dataset. This varied based on compressor technology but extended the saturated suction and discharge temperatures XX - YY $^\circ$C \com{add here the ranges applicable to this study} beyond the training envelope, at the most extreme.
+
+The variable speed data set was only available for the spool, reciprocating, and screw compressors. This data set has a fixed saturated suction and discharge temperature and superheat with variable operating speed/frequency. It includes speed variation ranging from XX - YY rpm for the spool compressor with Z points; XX - YY rpm for the reciprocating compressor with Z points, and XX - YY rpm for the screw compressor with Z points. The saturated suction/discharge and superheat for the compressors is XX and YY $^\circ$C, and ZZ K, XX and YY $^\circ$C, and ZZ K, XX and YY $^\circ$C, and ZZ K for the spool, reciprocating, and screw compressor, respectively. \com{Add in the relevant details here that I made space for}
+
+The variable superheat data set was only available for....\com{fill this in} This data set has a fixed saturated suction and discharge temperature and speed with superheats that vary XX to YY K for the spool...\com{fill this in}
+
+\subsection{Model Testing Methodology}
 \label{sec:methodology}
-Model testing begins with defining a baseline data set from which a training data set is used to train model parameters. Ten data points were selected to train the models. Motivation for this number of training points stems from the fact that the AHRI model needs ten data points for tuning its ten regression coefficients. The training data set is selected at points interior to the most extreme envelope conditions present within a data set. This allows for an extrapolation data set to be defined such that all or most points in the extrapolation set are outside the training bounds of the baseline data set. 
+Figure \ref{fig:methodology} graphically describes the methodology utilized for this study. For each compressor technology, each of the five models are first trained using their accompanying training data set (which includes 10 points). The trained model is then compared against experimental data from the other three data subsets and the baseline data set. The model performance is evaluated using the trained models abaility to predict the various subsets of experimental data evaluated using the Mean Absolute Percentage Error \com{insert equation},
+
+\begin{equation}
+MAPE = INSERT
+\end{equation}
+
+where $X$ represents either the mass flow rate $\dot{m}$ or power $\dot{W}$ predicted by each model.
 
 \begin{figure}[h] % The [h] places the figure 'here'. Available options are [!htb] t=top, b=bottom
 \label{fig:methodology}
@@ -394,9 +421,10 @@ Model testing begins with defining a baseline data set from which a training dat
     \node [block] (train_params) {Train Model Parameters};
     \node [block3, right = 2cm of train_params] (train_Set) {Training Data Set};
     \node [block1, below = 2cm of train_params] (run_with) {Using trained parameters, \\ run the model with:};
-    \node [block2, right = 2cm of run_with] (testing) {Testing Data Set};
+    \node [block2, right = 2cm of run_with] (testing) {Baseline Data Set};
     \node [block2, above = 0.125cm of testing] (var_speed) {Variable Speed Data Set};
     \node [block2, below =0.125cm of testing] (var_super) {Variable Superheat Data Set};
+	  \node [block2, below =0.125cm of var_super] (extra) {Extrapolation Data Set};
     \node [block, below = 2cm of run_with] (evaluate_errors) {Record Error Metrics};
     
     % Draw edges
@@ -406,26 +434,28 @@ Model testing begins with defining a baseline data set from which a training dat
     \path [line,dashed] (testing) -- (run_with);
     \path [line,dashed] (var_speed) -- (run_with);
     \path [line,dashed] (var_super) -- (run_with);
+		\path [line,dashed] (extra) -- (run_with);
     
 \end{tikzpicture}
 \end{center}
 \end{figure}
 
-\subsection{Modulation}
-
-Modulation or variable speed testing consisted of running the models at operating speeds differing from that in the training data set. This gives an estimate of a models capability of capturing variable speed operation. The MAPE is used to quantify model performance. 
-
-\subsection{Extrapolation}
-
-Extrapolation performance quantification in this work consists of running a model at conditions outside of its training data. There are two extrapolation scenario defined: envelope extrapolation and superheat extrapolation. Modulation scenarios could be included in this definition of extrapolation, however, the authors have included modulation testing separately. 
-
-\subsubsection{Envelope Extrapolation}
-
-Envelope extrapolation is tested by running a model at data points outside the envelope conditions in which a model is trained. Data points were plotted as evaporating temperature verses condensing temperature and a training envelope was determined. Envelope extrapolation points are defined as points outside this envelope. These data points directly test a models capability of predicting performance outside training bounds. 
-
-\subsubsection{Superheat Extrapolation}
-
-Superheat extrapolation is tested by running a model at data points with a different superheat than that of its training data. Constant superheat data is used for model training therefore evaluating model performance at conditions different than that of the training data will indicate a models capability at superheat extrapolation. 
+\lcom{}{After updating the above sections these sections seem a bit uncessary to me.  If I am missing some piece of information you wanted to include, please do add that information back.}
+%\subsection{Modulation}
+%
+%Modulation or variable speed testing consisted of running the models at operating speeds differing from that in the training data set. This gives an estimate of a models capability of capturing variable speed operation. The MAPE is used to quantify model performance. 
+%
+%\subsection{Extrapolation}
+%
+%Extrapolation performance quantification in this work consists of running a model at conditions outside of its training data. There are two extrapolation scenario defined: envelope extrapolation and superheat extrapolation. Modulation scenarios could be included in this definition of extrapolation, however, the authors have included modulation testing separately. 
+%
+%\subsubsection{Envelope Extrapolation}
+%
+%Envelope extrapolation is tested by running a model at data points outside the envelope conditions in which a model is trained. Data points were plotted as evaporating temperature verses condensing temperature and a training envelope was determined. Envelope extrapolation points are defined as points outside this envelope. These data points directly test a models capability of predicting performance outside training bounds. 
+%
+%\subsubsection{Superheat Extrapolation}
+%
+%Superheat extrapolation is tested by running a model at data points with a different superheat than that of its training data. Constant superheat data is used for model training therefore evaluating model performance at conditions different than that of the training data will indicate a models capability at superheat extrapolation. 
  
 \section{Results}
 
@@ -638,10 +668,12 @@ Future work based on the results presented herein will be developing a compresso
 
 \section{Conclusions}
 
+\lcom{add more quantitative results to conclusion}{This section does highlight the biggest conclusion, which is the the Winandy model seems like the best candidate to modify moving forward.  However, it does not include anything else.  Add to this section some of the other conclusions, where were models strong/weak and how were they quantified?  Keep in mind, that for most people skimming your paper, they will read the abstract, introduction, and conclusion, if they don't like what they see there they won't read the rest of it. }
+
 The present work studied the extrapolation and modulation capabilities of select semi-empirical compressor models. Data sets selected for model testing were of high fidelity to ensure model prediction is accurate to measured data instead of manufacture published data. Data sets were split to enable training model parameters at constant conditions then test model with data outside that of the training data. Four different data sets were identified and used: the training data set, envelope extrapolation data set, variable superheat data set, and variable speed data set. Models were trained using the training data set then tested at the others to record performance. Based on the results, the semi-empirical models outperform the empirical models when considering all aspects desired by the author. These were: limited training data, low computational cost, and accurate performance at extrapolation and modulation scenarios. The model proposed by \cite{Winandy_recip} is chosen as a formulation with promising attributes for future model development. As cited in the literature survey, this formulation has been modified to capture a range of technologies and will be the basis for a new model desired to capture multiple compressor technologies and exhibit strong extrapolation and modulation capabilities.
 
 \section{Acknowledgment}
-The author would like to acknowledge the Center for Integrated Building System for funding the research project that produced this study.
+The authors would like to acknowledge the Center for Integrated Building Systems, an Industry/University cooperative research center at Oklahoma State University for funding this study. They would also like to thank Joe Orosz of Torad Engineering for his valuable mentorship and feedback.
 
 \newpage
 \FloatBarrier

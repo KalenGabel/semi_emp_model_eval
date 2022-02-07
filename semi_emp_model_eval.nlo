@@ -1,8 +1,8 @@
 \nomenclatureentry{aMAPE@[{MAPE}]\begingroup Mean Absolute Percent Error\nomeqref {0}|nompageref}{1}
 \nomenclatureentry{aANN@[{ANN}]\begingroup Artificial Neural Network\nomeqref {0}|nompageref}{1}
-\nomenclatureentry{a$T_s$@[{$T_s$}]\begingroup Suction dew point temp. \nomunit{[C or F]}\nomeqref {1}|nompageref}{7}
-\nomenclatureentry{a$T_d$@[{$T_d$}]\begingroup Discharge dew point temp. \nomunit{[C or F]}\nomeqref {1}|nompageref}{7}
-\nomenclatureentry{a$C_1-C_{10}$@[{$C_1-C_{10}$}]\begingroup AHRI coefficients \nomunit{[-]}\nomeqref {1}|nompageref}{7}
+\nomenclatureentry{a$T_s$@[{$T_s$}]\begingroup Suction dew point temp. \nomunit{[C or F]}\nomeqref {1}|nompageref}{8}
+\nomenclatureentry{a$T_d$@[{$T_d$}]\begingroup Discharge dew point temp. \nomunit{[C or F]}\nomeqref {1}|nompageref}{8}
+\nomenclatureentry{a$C_1-C_{10}$@[{$C_1-C_{10}$}]\begingroup AHRI coefficients \nomunit{[-]}\nomeqref {1}|nompageref}{8}
 \nomenclatureentry{a$a_1-a_{5}$@[{$a_1-a_{5}$}]\begingroup Mass flow coefficients \nomunit{[-]}\nomeqref {1}|nompageref}{9}
 \nomenclatureentry{a$c_1-c_{3}$@[{$c_1-c_{3}$}]\begingroup Mass flow ratio coefficients \nomunit{[-]}\nomeqref {1}|nompageref}{9}
 \nomenclatureentry{a$b_1-b_{5}$@[{$b_1-b_{5}$}]\begingroup Power coefficients \nomunit{[-]}\nomeqref {1}|nompageref}{9}
