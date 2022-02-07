@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 This is XeTeX, Version 3.14159265-2.6-0.999992 (MiKTeX 21.1) (preloaded format=xelatex 2021.3.5)  7 FEB 2022 10:52
+=======
+This is XeTeX, Version 3.14159265-2.6-0.999992 (MiKTeX 21.1) (preloaded format=xelatex 2021.3.5)  7 FEB 2022 10:51
+>>>>>>> 511154e8eb107b31d103cc6b32dfaabdc34838e3
 entering extended mode
 **./semi_emp_model_eval.tex
 (semi_emp_model_eval.tex
@@ -1420,7 +1424,11 @@ LaTeX Warning: Marginpar on page 13 moved.
 LaTeX Warning: Marginpar on page 13 moved.
 
 
+<<<<<<< HEAD
 Package caption Warning: \label without proper reference on input line 405.
+=======
+Package caption Warning: \label without proper reference on input line 404.
+>>>>>>> 511154e8eb107b31d103cc6b32dfaabdc34838e3
 See the caption package documentation for explanation.
 
 
@@ -1512,7 +1520,11 @@ Package rerunfilecheck Info: File `semi_emp_model_eval.out' has not changed.
 Here is how much of TeX's memory you used:
  30222 strings out of 412016
  556913 string characters out of 2845143
+<<<<<<< HEAD
  1041729 words of memory out of 3000000
+=======
+ 1042580 words of memory out of 3000000
+>>>>>>> 511154e8eb107b31d103cc6b32dfaabdc34838e3
  49410 multiletter control sequences out of 15000+200000
  408952 words of font info for 55 fonts, out of 3000000 for 9000
  1348 hyphenation exceptions out of 8191
