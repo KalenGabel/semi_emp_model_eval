@@ -87,7 +87,8 @@
 %\newpageafter{author}
 \begin{abstract}
 
-Testing and evaluation of select semi-empirical compressor models is carried out to quantify performance in modulation and extrapolation scenarios. Three representative models from literature are benchmarked against an artificial neural network (ANN) model and the industry standard AHRI model. A methodology for quantifying model performance, compared against experimental data, in extrapolation and modulation scenarios is developed. The different formulations are compared against high-fidelity performance data taken from either a hot-gas bypass load stand or a compressor calorimeter. Scroll, screw, reciprocating, and spool compressor technologies and four different refrigerants were used in the evaluation. In total, 327 data points were used during model testing. The mean absolute percentage error (MAPE) is calculated for each scenario and used to determine model performance against one another. Given a model predicts the compressor technology, the semi-empirical models yield MAPE’s less than 5\% for mass flow rate and power in modulation scenarios while performing at or below 8\% MAPE in envelope extrapolation scenarios. They capture superheat extrapolation to below 6\% MAPE for mass flow rate and power with the exception of one model performing at 18\% MAPE in power prediction for one data set. The empirical formulations do not predict modulation behavior and showed varying performance at the extrapolation scenarios. Limitations with respect to model training data and overall performance are described. A model developed by Winandy et. al is identified as a starting point for a new semi-empirical model that can capture multiple compressor technologies while exhibiting good modulation and extrapolation capabilities.
+Testing and evaluation of select semi-empirical compressor models is carried out to quantify performance in modulation and extrapolation scenarios. Three representative models from literature are benchmarked against an artificial neural network (ANN) model and the industry standard AHRI model. A methodology for quantifying model performance, compared against experimental data, in extrapolation and modulation scenarios is presented. Predictions from the five models are compared against high-fidelity performance data taken from either a hot-gas bypass load stand or a compressor calorimeter. Scroll, screw, reciprocating, and spool compressor technologies collected with R410A, R1234ze(E), R134a, and R32 refrigerants. In total, 327 experimental data points were collected for model testing. The Mean Absolute Percentage Error (MAPE) is calculated for the mass flow rate and power of each compressor providing a mean to quantify the models ability to predict experimental data under modulation and extrapolation scenarios. [Add some quantification here of results, key results] The semi-empirical models yield MAPE’s less than 5\% for mass flow rate and power in modulation scenarios while performing at or below 8\% MAPE in envelope extrapolation scenarios. The semi-empirical models also capture superheat extrapolation to below 6\% MAPE for mass flow rate and power with the exception of one model [what model, name it] performing at 18\% MAPE in power prediction for one data set [what data set, name it]. The empirical formulations do not predict modulation behavior and showed varying performance at the extrapolation scenarios. Limitations with respect to model training data and overall performance are described. Future work includes the development of a new semi-empirical model will be developed, based on a semi-empircal formulation that can capture multiple compressor technologies while exhibiting good modulation and extrapolation capabilities.
+
 \nomenclature{MAPE}{Mean Absolute Percent Error}
 \nomenclature{ANN}{Artificial Neural Network}
 \end{abstract}
@@ -300,7 +301,7 @@ The authors proposed model takes four parameters to predict mass flow rate; the 
 
 \lcom{Add some details about each of the data sets}{In general, we need to try and include as much information as possible about these data sets.  What are the ranges of all the parameters studied, and which compressor technologies included variable superheat, speed, etc.  This paper needs to be reproducable so we need to provide enough information that someone could re-do this work, given our data.
 
-Additionally, there needs to be some consistency in terminology decided upon.  In Figure 1 you refer to three sub-sets of data, extrapolation, variable speed, and variable superheat, in addition to the training data.  In Figure 2, you then include the testing data set, what is this? It is confusing and should be clarified.  I suggest using a mimumum number of names, so don't introduce testign data set unless you have too. I have updated Figure 2 to reflect what I think is happening, but I'm honestly not certain so please do update.}
+Additionally, there needs to be some consistency in terminology decided upon.  In Figure 1 you refer to three sub-sets of data, extrapolation, variable speed, and variable superheat, in addition to the training data.  In Figure 2, you then include the testing data set, what is this? It is confusing and should be clarified.  I suggest using a mimumum number of names, so don't introduce testign data set unless you have too. I have updated Figure 2 to reflect what I think is happening, but I'm honestly not certain so please do update. Further, we don't present baseline data results, perhaps that would be prudent to do as a basis of reference.}
 
 High-fidelity data, collected compliant ASHRAE standard 23.1, \com{cite the standard} was used to train each of the five models presented and explore their behavior against three additional data subsets focused on extrapolation, modulation (variable speed), and variable superheat behavior. Performance data for four different compressor technologies; scroll, screw, reciprocating, and spool compressors are used with four working fluids, R134a, R401A, R1234ze(E), and R32 with a total of 327 data points collected. The compressor types, refrigerant, and number of data points are summarized in Table \ref{Tab:data_info}. The first three compressor types represent the most common technologies used in commercial and residential heating and cooling equipment today. The fourth technology, spool compressors, represent a novel compression technology that is still in the design optimization phase of development. 
 
@@ -383,9 +384,10 @@ A baseline data set includes data from all compressors and refrigerants at vario
 From the baseline data is split a training data set used to train model parameters. Ten data points were selected  as the training data set to train the models. Motivation for this number of training points stems from the AHRI model requirements for ten data points to tune its ten regression coefficients. The training data set is selected at points interior to the most extreme envelope conditions (\emph{i.e.} most extreme saturated suction and discharge temperatures) present within a data set. The baseline data was selected with saturated temperatures that were XX - YY $^\circ$C \com{add here the ranges applicable to this study} inside the maximum envelope conditions, depending on the data set and compressor.
 
 \subsubsection{Extrapolation, and Variable Speed/Superheat Data Sets}
+\label{sec:extra}
 The extrapolation data set is a subset of the baseline data and includes saturated suction and discharge temperatures that extend beyond the envelope selected by the training dataset. This varied based on compressor technology but extended the saturated suction and discharge temperatures XX - YY $^\circ$C \com{add here the ranges applicable to this study} beyond the training envelope, at the most extreme.
 
-The variable speed data set was only available for the spool, reciprocating, and screw compressors. This data set has a fixed saturated suction and discharge temperature and superheat with variable operating speed/frequency. It includes speed variation ranging from XX - YY rpm for the spool compressor with Z points; XX - YY rpm for the reciprocating compressor with Z points, and XX - YY rpm for the screw compressor with Z points. The saturated suction/discharge and superheat for the compressors is XX and YY $^\circ$C, and ZZ K, XX and YY $^\circ$C, and ZZ K, XX and YY $^\circ$C, and ZZ K for the spool, reciprocating, and screw compressor, respectively. \com{Add in the relevant details here that I made space for}
+The variable speed data set was only available for the spool, and screw compressors. This data set has a fixed saturated suction and discharge temperature and superheat with variable operating speed/frequency. It includes speed variation ranging from XX - YY rpm for the spool compressor with Z points and XX - YY rpm for the screw compressor with Z points. The saturated suction/discharge and superheat for the compressors is XX and YY $^\circ$C, and ZZ K, XX and YY $^\circ$C, and ZZ K for the spool, and screw compressor, respectively. \com{Add in the relevant details here that I made space for}. 
 
 The variable superheat data set was only available for....\com{fill this in} This data set has a fixed saturated suction and discharge temperature and speed with superheats that vary XX to YY K for the spool...\com{fill this in}
 
@@ -459,10 +461,14 @@ where $X$ represents either the mass flow rate $\dot{m}$ or power $\dot{W}$ pred
  
 \section{Results}
 
-The five models were tested at modulation and extrapolation scenarios following the methodology outlined in Section \ref{sec:methodology}. The Winandy model failed to predict reciprocating compressor data while the Popovic and Shapiro model did not predict scroll compressor data. The semi-empirical models do extrapolate and capture modulation given the model predicts the data. The AHRI model does not extrapolate or capture modulation adequately. The ANN model does extrapolate to a reasonable level, however it does not predict variable speed performance. The Shao model captures extrapolation and modulation to a reasonable level, but requires variable speed data in its training data pool. The Shao model was derived for capturing variable speed performance, therefore it is not unreasonable to expect it to perform well in modulation testing.
+The five models were tested at modulation and extrapolation scenarios following the methodology outlined in Section \ref{sec:methodology} with results presented in this section for the models ability to predict both mass flow rate and compressor power. 
 
-\subsection{Modulation Scenarios}
-\subsubsection{Mass Flow Rate}
+\subsection{Baseline}
+\lcom{add baseline data results}{I'm not sure what these results look like, but it occured to me that it may be a good idea to include the results as a reference point.}
+
+\subsection{Modulation}
+
+Figures \ref{fig:mdot_vspd} and \ref{fig:power_vspd} are bar charts representing the MAPE of model predicted results for each of the models using the three modulation data sets described in Section \ref{sec:extra}. \com{why not summarize in a table as well?} \com{see if you can add the ANN error to the figure itself, update the figures per the ASHRAE presentation too}
 
 \begin{figure}[h]
 \captionsetup{justification=centering}
@@ -473,10 +479,9 @@ The five models were tested at modulation and extrapolation scenarios following 
 \end{figure}
 \FloatBarrier
 
-The testing results for modulation situations show the Winandy, Popovic and Shapiro, and the Shao model capture mass flow rate at MAPE's less than 5\%. This provides good indication that the a fore mentioned models could be used to predict mass flow rate at conditions outside the bounds of their training data. The ANN model produced errors around 20\% and performs poorly when tested at modulation scenarios. The errors achieved for the AHRI model are not shown on the modulation bar plot since the screw compressor data did have ten data points at constant superheat and speed to train the model's coefficients. The errors achieved for spool compressor mass flow rate using R134a and R1234ze(E) when running the AHRI model were 20.7\% and 20.3\%, respectively. 
+Shown in Figure \ref{fig:mdot_vspd}, the testing results for modulation situations show the Winandy, Popovic and Shapiro, and the Shao model capture mass flow rate at MAPE's less than 5\%. This provides good indication that the aforementioned models could be used to predict mass flow rate at conditions outside the bounds of their training data. The ANN model produced errors around 20\% and performs poorly when tested at modulation scenarios. The errors achieved for the AHRI model are not shown on the modulation bar plot since the screw compressor data did have ten data points at constant superheat and speed to train the model's coefficients. The errors achieved for spool compressor mass flow rate using R134a and R1234ze(E) when running the AHRI model were 20.7\% and 20.3\%, respectively. 
 
 
-\subsubsection{Power Results}
 \begin{figure}[!h]
 \centering
 \includegraphics[width=0.7\linewidth]{power_vspeed.png}
@@ -485,10 +490,11 @@ The testing results for modulation situations show the Winandy, Popovic and Shap
 \end{figure}
 \FloatBarrier
 
-The results for power prediction under modulation scenarios were similar to that of mass flow rate. The Winandy, Popovic and Shapiro, and Shao model performed under 5\% MAPE. The ANN model again performs at MAPE's around 20\% for power prediction when tested at modulation scenarios. Similar to the mass flow rate plots, the AHRI model is not shown on the graph for power prediction. The errors achieved for power prediction using the AHRI model and tested with the spool compressor using R134a and R1234ze(E) were  20.2\% and 21.4\%, respectfully.
+Shown in Figure \ref{fig:power_vspd}, the results for power prediction under modulation scenarios were similar to that of mass flow rate. The Winandy, Popovic and Shapiro, and Shao model performed under 5\% MAPE. The ANN model again performs at MAPE's around 20\% for power prediction when tested at modulation scenarios. Similar to the mass flow rate, the AHRI model is not shown on the graph for power prediction. The errors achieved for power prediction using the AHRI model and tested with the spool compressor using R134a and R1234ze(E) were  20.2\% and 21.4\%, respectfully.
 
-\subsection{Extrapolation Scenarios}
-\subsubsection{Mass Flow Rate Results}
+\subsection{Extrapolation}
+Figures \ref{fig:mdot_extrp} and \ref{fig:power_extrp} are bar charts representing the MAPE of model predicted results for each of the models using the three modulation data sets described in Section \ref{sec:extra} with results summarized in Table \ref{Tab:extrp_mdot_results}. 
+
 \begin{figure}[!h]
 \centering
 \includegraphics[width=0.7\linewidth]{mdot_extrp.png}
@@ -520,11 +526,10 @@ The results for power prediction under modulation scenarios were similar to that
 \end{center}
 \end{table}
 
-Results show that mass flow rate extrapolation is captured by the semi-empirical models, given that they do predict the compressor technology. The Winandy model performs below 6\% MAPE for the scroll and spool compressor technologies. The model extrapolated with two different refrigerant data sets for the spool compressor. The model did not capture reciprocating compressor performance. The Popovic and Shapiro model extrapolated below 8\% MAPE for the compressor technologies that it predicted. This model however, did not capture scroll compressor technology but performed better at extrapolating spool compressor data than reciprocating data, the latter of which the model was derived initially to predict. The ANN model extrapolated below 3\% MAPE except in the case of the spool compressor utilizing R134a. The Shao model performed well when ran with scroll and the spool R1234ze(E) data, however extrapolation errors rose to 8.2\% and 10.7\% MAPE for the reciprocating and spool R134a data respectively. The AHRI model did not perform adequately when extrapolating as can be seen by the errors rising from 45.\% to 6.0e+6.
+Shown in Figure \ref{fig:mdot_extrp}, results show that mass flow rate extrapolation is captured by the semi-empirical models, given that they do predict the compressor technology. The Winandy model performs below 6\% MAPE for the scroll and spool compressor technologies. The model extrapolated with two different refrigerant data sets for the spool compressor. The model did not capture reciprocating compressor performance. The Popovic and Shapiro model extrapolated below 8\% MAPE for the compressor technologies that it predicted. This model however, did not capture scroll compressor technology but performed better at extrapolating spool compressor data than reciprocating data, the latter of which the model was derived initially to predict. The ANN model extrapolated below 3\% MAPE except in the case of the spool compressor utilizing R134a. The Shao model performed well when ran with scroll and the spool R1234ze(E) data, however extrapolation errors rose to 8.2\% and 10.7\% MAPE for the reciprocating and spool R134a data respectively. The AHRI model did not perform adequately when extrapolating as can be seen by the errors rising from 45.\% to 6.0e+6.
 
 % ------------------------------------------------------
 % ------------------------------------------------------
-\subsubsection{Power Results}
 \begin{figure}[!h]
 \centering
 \includegraphics[width=0.7\linewidth]{power_extrp.png}
@@ -560,10 +565,11 @@ Results show that mass flow rate extrapolation is captured by the semi-empirical
 \end{center}
 \end{table}
 
-Since the mass flow rate results are used in the power prediction for the Winandy and Popovic and Shapiro models, it can be expected that when either model doesn't predict the mass flow rate adequately, the power formulation will suffer. This is the case for the Winandy model predicting reciprocating compressor power requirements and the Shapiro and Popovic model predicting scroll compressor power requirements under envelope extrapolation scenarios. When the Winandy model predicts the compressor technology, it extrapolates below 4\% MAPE. The Popovic and Shapiro model extrapolates below 7\% MAPE. The Shao model extrapolated below 9\% MAPE for all cases while the ANN model performed under 2\% MAPE for cases except that of the reciprocating data in which it performed at 8.5\% MAPE. The AHRI model did not extrapolate adequately. It produced errors between 27.5\% and 6.7e+6\% MAPE. 
+Shown in Figure \ref{fig:power_extrp}, since the mass flow rate results are used in the power prediction for the Winandy and Popovic and Shapiro models, it can be expected that when either model doesn't predict the mass flow rate adequately, the power formulation will suffer. This is the case for the Winandy model predicting reciprocating compressor power requirements and the Shapiro and Popovic model predicting scroll compressor power requirements under envelope extrapolation scenarios. When the Winandy model predicts the compressor technology, it extrapolates below 4\% MAPE. The Popovic and Shapiro model extrapolates below 7\% MAPE. The Shao model extrapolated below 9\% MAPE for all cases while the ANN model performed under 2\% MAPE for cases except that of the reciprocating data in which it performed at 8.5\% MAPE. The AHRI model did not extrapolate adequately. It produced errors between 27.5\% and 6.7e+6\% MAPE. 
 
-\subsection{Variable Superheat Scenarios}
-\subsubsection{Mass Flow Rate Results}
+\subsection{Variable Superheat}
+\lcom{copy what I did above}{Look at how I added information to the above sections and please update this section to be consistent. It is critical to introduce each technical figure and discuss what is in it before discussing results.}
+
 \begin{figure}
 \centering
 \includegraphics[width=0.75\linewidth]{mdot_vspr.png}
@@ -597,7 +603,6 @@ Since the mass flow rate results are used in the power prediction for the Winand
 
 The mass flow rate for variable superheat scenarios is best predicted by the Winandy model. The Shapiro and Popovic model performs well for the compressor technology it does predict, it performs under 2.5\% MAPE for the spool data sets. The Shao model predicts mass flow under 6\% for all cases except the spool compressor data set using R1234ze(E). As can be seen from the bar chart and table, the AHRI model does noit predict mass flow rate at variable superheat condition adequately. There exists a superheat correction factor for the model, however it is not applied in the present study. The ANN model predicts mass flow rate at a MAPE above 20\% for all situations and yielded inadequate results.  
 
-\subsubsection{Power Results}
 \begin{figure}
 \centering
 \includegraphics[width=0.7\linewidth]{power_vspr.png}
@@ -633,6 +638,9 @@ Power results show that the Winandy model performed best at predicting variable 
 
 
 \section{Discussion}
+
+The Winandy model failed to predict reciprocating compressor data while the Popovic and Shapiro model did not predict scroll compressor data. The semi-empirical models do extrapolate and capture modulation provided the model first predicts the data. The AHRI model does not extrapolate or capture modulation adequately. The ANN model does extrapolate to a reasonable level, however it does not predict variable speed performance. The Shao model captures extrapolation and modulation to a reasonable level, but requires variable speed data in its training data pool. The Shao model was derived for capturing variable speed performance, therefore it is not unreasonable to expect it to perform well in modulation testing.
+
 The semi-empirical models (Winandy model and Popovic and Shapiro model) performed adequately in extrapolation and modulation scenarios. Given that the model predicted the compressor technology, the highest MAPE for mass flow rate came from the Shapiro and Popovic model at 7.3\%. For power prediction the same model recorded the highest error, which was 6.9\%. The more empirical Shao model gave promising results for mass flow rate and power prediction in modulation scenarios, however, mixed results were achieved in extrapolation testing where resulting MAPE's ranged from 0.4\% to 42.2\%. The AHRI formulation performed the worst in modulation and extrapolation scenarios. Results show that the model should not be used in modulation scenarios or beyond the bounds of its' training data. The ANN model has performed poorly in modulation scenarios where errors above 19\% were recorded in all data sets. In extrapolation scenarios, results were mixed with MAPE's between 0.8\% and 25.5\%. 
 
 From these results some conclusions can be made regarding the performance of the semi-empirical and empirical models.
@@ -652,10 +660,9 @@ From these results some conclusions can be made regarding the performance of the
 \item The AHRI model will not predict compressor performance under modulation or extrapolation scenarios
 \end{itemize}
 
-
 \subsection{Model Capabilities}
 
-The semi-empirical models yielded more consistent performance at extrapolation and modulation scenarios than the empirical models. The Shao model performed best at modulation scenarios, however as previously mentioned, the model uses variable speed data for training parameters. It does not account for a compression process and only takes data to fit coefficients. Similarly, the ANN and AHRI formulations only require data for tuning parameters. The Winandy model attempts to account for phenomena occurring in the suction line, discharge line, and compression chamber via the isentropic compression assumption and the suction and discharge heat transfer assumptions. The Shapiro and Popovic model does not account for suction and discharge gas heating, but it does model the compression process as polytropic and assumes suction and discharge pressure drops. These two models incorporate more physics into their formulations and are thought to be a good foundation for future model development. 
+The semi-empirical models yielded more consistent performance at extrapolation and modulation scenarios than the empirical models. The Shao model performed best at modulation scenarios, however as previously mentioned, the model uses variable speed data for training parameters. It does not account for a compression process and only takes data to fit coefficients. Similarly, the ANN and AHRI formulations only require data for tuning parameters. The Winandy model attempts to account for phenomena occurring in the suction line, discharge line, and compression chamber via the isentropic compression assumption and the suction and discharge heat transfer assumptions. The Shapiro and Popovic model does not account for suction and discharge gas heating, but it does model the compression process as polytropic and assumes suction and discharge pressure drops. These two models incorporate more physics into their formulations and the results suggest they are well suited for situations where limited data or model flexibility is desired. \com{It occured to me that the argument for using these approaches includes limited data and/or flexibility}
 
 \subsubsection{Model Limitations}
 
